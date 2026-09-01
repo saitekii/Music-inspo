@@ -16256,6 +16256,246 @@ const _concepts: Concept[] = [
       ],
     },
   },
+
+  // ── Slash Chords & Inversions ─────────────────────────────
+  {
+    id: "slash-chord-basics",
+    name: "Slash Chords (Chord/Bass Note)",
+    category: "harmonic-devices",
+    description:
+      "A chord played over a different bass note — written as Chord/Bass. C/E means a C major triad with E in the bass. Slash chords create smooth bass lines, imply richer harmony, and let you redefine a chord's function by changing its lowest note. The single most powerful tool for making basic progressions sound professional.",
+    tags: ["slash chord", "inversion", "bass", "voice leading", "fundamental"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["E2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["G2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-walkdown",
+    name: "Slash Chord Walkdown (I → I/7 → I/b7 → I/6)",
+    category: "progressions",
+    description:
+      "The same chord on top while the bass walks down chromatically: C → C/B → C/Bb → C/A. The descending bass creates harmonic motion from a single chord. The sound of every soul, gospel, and worship outro. James Brown, Stevie Wonder, and every church organist knows this move.",
+    tags: ["slash chord", "chromatic", "descending", "bass", "gospel", "soul"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["B2", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["Bb2", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["A2", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-walkup",
+    name: "Slash Chord Walkup (I → I/2 → I/3 → IV)",
+    category: "progressions",
+    description:
+      "The bass climbs stepwise under a held chord: C → C/D → C/E → F. Each bass note recontextualizes the upper triad — C/D implies a Dsus4, C/E is first inversion. The ascending line creates lift and momentum into the IV chord. A pop and worship staple.",
+    tags: ["slash chord", "ascending", "bass", "pop", "worship"],
+    audio: {
+      tempo: 76,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["D2", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["E2", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["F2", "A2", "C3", "F3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-chromatic-bass",
+    name: "Chromatic Bass Under Diatonic Chords",
+    category: "progressions",
+    description:
+      "Diatonic chords on top with a bass line that moves chromatically underneath, creating slash chords at every step. The upper harmony says 'everything is normal' while the bass says 'something is shifting.' The tension between the two is what makes film scores sound emotional.",
+    tags: ["slash chord", "chromatic", "bass", "film", "voice leading"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["B2", "D3", "G3", "B3"], duration: "2n" },
+        { notes: ["Bb2", "C3", "E3", "A3"], duration: "2n" },
+        { notes: ["A2", "C3", "E3", "A3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-pedal-bass",
+    name: "Chords Over Pedal Bass",
+    category: "progressions",
+    description:
+      "Multiple chords move on top while the bass stays on a single note — typically the tonic or dominant. Every chord becomes a slash chord against the pedal. Creates a dreamlike floating quality where the harmony drifts but the ground never moves. Radiohead, Sigur Rós, and ambient music live here.",
+    tags: ["slash chord", "pedal", "atmospheric", "ambient", "indie"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["C2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["C2", "D3", "F3", "A3"], duration: "2n" },
+        { notes: ["C2", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["C2", "F3", "A3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-dominant-pedal",
+    name: "Chords Over Dominant Pedal",
+    category: "progressions",
+    description:
+      "Chords change on top while the bass holds the 5th scale degree. Every chord becomes a slash-over-G (in C major). The sustained dominant creates mounting tension — the bass is begging to resolve to C but the upper voices keep wandering. When the bass finally moves to the tonic, the release is cathartic.",
+    tags: ["slash chord", "pedal", "tension", "dominant", "build"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["G2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["G2", "D3", "F3", "A3"], duration: "2n" },
+        { notes: ["G2", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["C2", "C3", "E3", "G3", "C4"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-first-inversion-chain",
+    name: "First Inversion Chain",
+    category: "progressions",
+    description:
+      "A sequence of chords all in first inversion — the 3rd in the bass. This puts every chord's bass note a third apart from the root, creating a smooth, connected bass line that glides between chords. Medieval fauxbourdon evolved into this. The sound is gentle, hymn-like, and inevitable.",
+    tags: ["slash chord", "inversion", "fauxbourdon", "voice leading", "smooth"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["E2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["F2", "D3", "F3", "A3"], duration: "2n" },
+        { notes: ["G2", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["A2", "F3", "A3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-second-inversion",
+    name: "Second Inversion Color Chords",
+    category: "harmonic-devices",
+    description:
+      "A chord with its 5th in the bass — the most unstable inversion. In classical theory it's restricted, but in pop, jazz, and film scoring, second inversions are color tools. C/G sounds like a G chord with upper extensions. The ambiguity is the point — is it C or G? Both. Neither. Beautiful.",
+    tags: ["slash chord", "inversion", "ambiguous", "harmonic color", "jazz"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["G2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["A2", "D3", "F3", "A3"], duration: "2n" },
+        { notes: ["B2", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["C3", "F3", "A3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-tritone-bass",
+    name: "Tritone Bass Substitution",
+    category: "harmonic-devices",
+    description:
+      "Placing a chord over a bass note a tritone away — like C/F# or Dm7/Ab. The tritone bass creates maximum dissonance and gravitational pull. It's how jazz musicians reharmonize on the fly: any chord can be darkened by dropping its bass a tritone. The resulting slash chord implies a completely different dominant function.",
+    tags: ["slash chord", "tritone sub", "jazz", "reharmonization", "tension"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["D3", "F3", "A3", "C4"], duration: "2n" },
+        { notes: ["Ab2", "D3", "F3", "B3"], duration: "2n" },
+        { notes: ["G2", "B2", "D3", "F3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-maj-over-min",
+    name: "Major Triad Over Minor Bass",
+    category: "harmonic-devices",
+    description:
+      "A major triad played over an unrelated minor-sounding bass note — like C/A (Am7 implied), Eb/C (Cm with a dark upper structure), or G/E (Em7 implied). The major triad brings brightness while the minor bass adds depth. This is how neo-soul and gospel create those lush, ambiguous voicings.",
+    tags: ["slash chord", "voicing", "neo-soul", "gospel", "ambiguous"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["A2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["E2", "G3", "B3", "D4"], duration: "2n" },
+        { notes: ["D2", "F3", "A3", "C4"], duration: "2n" },
+        { notes: ["A2", "C3", "E3", "G3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-bass-contrary",
+    name: "Contrary Motion Bass Line",
+    category: "progressions",
+    description:
+      "The melody or upper voices move in one direction while the bass moves in the opposite direction, creating slash chords at every intersection. The widening gap between voices creates a sense of expansion; the narrowing gap creates urgency. The oldest trick in counterpoint, now powered by slash chord notation.",
+    tags: ["slash chord", "contrary motion", "voice leading", "counterpoint", "classical"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["B2", "F3", "A3", "D4"], duration: "2n" },
+        { notes: ["Bb2", "G3", "Bb3", "E4"], duration: "2n" },
+        { notes: ["A2", "A3", "C4", "F4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "slash-chord-iv-over-v",
+    name: "IV/V (Subdominant Over Dominant Bass)",
+    category: "harmonic-devices",
+    description:
+      "The IV chord played over the 5th scale degree in the bass — F/G in C major. This creates a Vsus4 or V11 sound without explicitly naming it. The subdominant upper structure softens the dominant's aggressiveness. Used constantly in pop, R&B, and film to create a 'floating dominant' that resolves gently.",
+    tags: ["slash chord", "dominant", "subdominant", "pop", "rnb", "film"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["G2", "F3", "A3", "C4"], duration: "2n" },
+        { notes: ["G2", "F3", "A3", "C4"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "prog-slash-chord-descent",
+    name: "I → V/7 → vi → IV/3 (Smooth Bass Descent)",
+    category: "progressions",
+    description:
+      "The pop four-chord progression with inversions chosen to create a smooth descending bass line: C→B→A→A (or C→B→A→F with F/A). Every chord connects to the next by step or semitone in the bass. This is why some pop songs feel effortless — the chords are simple but the bass voice-leads like Bach.",
+    tags: ["slash chord", "descending", "pop", "voice leading", "smooth"],
+    audio: {
+      tempo: 76,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["B2", "D3", "G3", "B3"], duration: "2n" },
+        { notes: ["A2", "C3", "E3", "A3"], duration: "2n" },
+        { notes: ["A2", "C3", "F3", "A3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "prog-slash-chord-ascent",
+    name: "I/3 → IV → V/7 → I (Ascending Bass Line)",
+    category: "progressions",
+    description:
+      "Inversions chosen to create a rising bass: E→F→B→C (in C major). The ascending bass builds energy and forward motion even though the chords themselves are completely diatonic. The secret weapon for verses that need to build into a chorus without getting harmonically complex.",
+    tags: ["slash chord", "ascending", "pop", "voice leading", "build"],
+    audio: {
+      tempo: 76,
+      events: [
+        { notes: ["E2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["F2", "A2", "C3", "F3"], duration: "2n" },
+        { notes: ["B2", "D3", "G3", "B3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
 ];
 
 export const concepts: Concept[] = _concepts.map((c) =>
