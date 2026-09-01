@@ -280,7 +280,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "A chromatic descending bass line from tonic down to dominant: 1-7-b7-6-b6-5. Each half step in the bass generates a new chord above it. One of the most emotionally powerful patterns in music, from Purcell to Radiohead.",
-    tags: ["progression", "baroque", "pop", "chromatic", "bass line", "lament", "descending"],
+    tags: ["progression", "baroque", "pop", "chromatic", "bass line", "lament", "descending", "passing chords"],
     audio: {
       tempo: 72,
       events: [
@@ -901,7 +901,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "A chromatic pattern where the outer voices move in contrary motion by half step while inner voices hold or move minimally. Generates a chain of dominant-quality chords. Named for its ability to pass through many keys like an omnibus (bus) passing stops.",
-    tags: ["chromatic", "contrary motion", "dominant", "classical", "sequence"],
+    tags: ["chromatic", "contrary motion", "dominant", "classical", "sequence", "passing chords"],
     audio: {
       tempo: 72,
       events: [
@@ -1337,7 +1337,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "A chromatic descent within the tonic chord: the root stays put while an inner voice walks down (8→maj7→b7→6 or into IV). Creates forward motion without changing the bass. The James Bond progression, \"My Funny Valentine,\" and countless film cues.",
-    tags: ["progression", "pop", "broadway", "chromatic", "inner voice", "line cliche"],
+    tags: ["progression", "pop", "broadway", "chromatic", "inner voice", "line cliche", "passing chords"],
     audio: {
       tempo: 85,
       events: [
@@ -1371,7 +1371,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "A bass line moving by half steps underneath changing harmonies. Each semitone step generates its own chord above, creating a smooth, inevitable pull. Ascending chromatic bass builds tension; descending creates pathos. The spine of golden age Hollywood orchestration.",
-    tags: ["bass", "chromatic", "golden age", "motion", "stepwise"],
+    tags: ["bass", "chromatic", "golden age", "motion", "stepwise", "passing chords"],
     audio: {
       tempo: 80,
       events: [
@@ -3081,7 +3081,7 @@ const _concepts: Concept[] = [
     category: "gospel",
     description:
       "A cadential pattern at the end of a phrase that circles back to the top — typically IV → iv → I or a more elaborate chromatic descent. The minor iv chord (borrowed from the parallel minor) adds a bittersweet, \"amen\" quality. Often extended with walk-downs and passing diminished chords. The emotional climax of every gospel performance.",
-    tags: ["gospel", "turnaround", "cadence", "minor iv", "return"],
+    tags: ["gospel", "turnaround", "cadence", "minor iv", "return", "passing chords"],
     audio: {
       tempo: 75,
       events: [
@@ -3788,7 +3788,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "Diminished 7th chords that function as leading-tone chords to diatonic scale degrees other than I. Like secondary dominants but with the extra chromatic bite of a fully diminished sonority. #i°7 → ii, #ii°7 → iii, #iv°7 → V. The secret ingredient behind smooth jazz and gospel passing chords.",
-    tags: ["harmony", "diminished", "secondary", "leading tone", "chromatic"],
+    tags: ["harmony", "diminished", "secondary", "leading tone", "chromatic", "passing chords"],
     audio: {
       tempo: 90,
       events: [
@@ -3806,7 +3806,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "Extending the dominant harmony across multiple beats or bars before resolving. Dominant pedals, cadential 6/4, passing chords over a V bass — all ways to stretch the tension. The longer the prolongation, the bigger the payoff. Beethoven symphonies live here.",
-    tags: ["harmony", "dominant", "prolongation", "tension", "cadence"],
+    tags: ["harmony", "dominant", "prolongation", "tension", "cadence", "passing chords"],
     audio: {
       tempo: 80,
       events: [
@@ -3825,7 +3825,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "Extending the tonic harmony through neighbor chords, passing chords, and pedal tones. The tonic stays in control even as surface harmonies move. I → V4/3 → I6, I → vii°6 → I, or simply a tonic pedal under changing upper voices. The foundation of tonal stability.",
-    tags: ["harmony", "tonic", "prolongation", "pedal", "stability"],
+    tags: ["harmony", "tonic", "prolongation", "pedal", "stability", "passing chords"],
     audio: {
       tempo: 80,
       events: [
@@ -3899,7 +3899,7 @@ const _concepts: Concept[] = [
     category: "gospel",
     description:
       "The plagal cadence (IV → I) as used in gospel and hymn tradition — but extended, decorated, and repeated with chromatic passing chords. Not just two chords but a whole cadential vocabulary built around the subdominant resolving to tonic. The 'Amen' at the end of every hymn, stretched into an art form.",
-    tags: ["gospel", "cadence", "plagal", "amen", "hymn"],
+    tags: ["gospel", "cadence", "plagal", "amen", "hymn", "passing chords"],
     audio: {
       tempo: 72,
       events: [
@@ -4950,7 +4950,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "The 12-bar blues reharmonized with jazz substitutions: a iv chord in bar 6, a ii-V turnaround in bars 9-10, tritone subs, diminished passing chords, and secondary dominants throughout. Charlie Parker's version adds so many changes that the original I-IV-V skeleton is barely visible. The bridge between blues and bebop.",
-    tags: ["progression", "jazz", "blues", "reharmonization", "bebop"],
+    tags: ["progression", "jazz", "blues", "reharmonization", "bebop", "passing chords"],
     audio: {
       tempo: 120,
       events: [
@@ -9853,7 +9853,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "Charlie Parker's chromatic reharmonization of the 12-bar blues — inserting ii-V motions and tritone substitutions into the basic blues framework. The fundamental I-IV-V blues structure is preserved, but every transition is enriched with passing chords. Bird Blues is the bridge between blues and bebop: it sounds like jazz but feels like blues. Learning to hear Bird Blues changes is a milestone in jazz fluency.",
-    tags: ["progression", "blues", "parker", "bebop", "reharmonization"],
+    tags: ["progression", "blues", "parker", "bebop", "reharmonization", "passing chords"],
     audio: {
       tempo: 120,
       events: [
@@ -15212,7 +15212,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "A diminished 7th chord that orbits a target chord from a semitone away, functioning as a chromatic neighbor rather than a passing chord. Unlike passing diminished chords that connect two different harmonies, this one decorates and intensifies a single destination — approaching it, surrounding it, or delaying its arrival.",
-    tags: ["harmony", "chromatic", "diminished", "jazz", "classical", "film"],
+    tags: ["harmony", "chromatic", "diminished", "jazz", "classical", "film", "passing chords"],
     audio: {
       tempo: 72,
       events: [
@@ -15715,6 +15715,205 @@ const _concepts: Concept[] = [
         { notes: ["C3", "Eb3", "G3"], duration: "2n" },
         { notes: ["C3", "Eb3", "Ab3"], duration: "2n" },
         { notes: ["B2", "D3", "G3"], duration: "1n" },
+      ],
+    },
+  },
+
+  // ── Passing Chords (additional) ─────────────────────────
+  {
+    id: "augmented-passing-chord",
+    name: "Augmented Passing Chord (I → I+ → IV)",
+    category: "harmonic-devices",
+    description:
+      "An augmented triad on the tonic connects I to IV by raising the 5th a half step — the raised 5th becomes the root of IV. The bass stays still while one voice climbs chromatically (G→G#→A in C major). Smoother than jumping straight to IV and adds a brief, shimmering instability. Beatles, Stevie Wonder, and classic soul use this constantly.",
+    tags: ["harmony", "augmented", "chromatic", "passing chords", "soul", "pop"],
+    audio: {
+      tempo: 90,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["C3", "E3", "G#3"], duration: "2n" },
+        { notes: ["C3", "F3", "A3"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "passing-64-chord",
+    name: "Passing 6/4 Chord",
+    category: "harmonic-devices",
+    description:
+      "A second-inversion triad that connects two root-position or first-inversion chords via stepwise bass motion. The 6/4 chord doesn't function as its own harmony — it's a byproduct of the bass passing between two stable chords. I → V6/4 → I6 with bass C→D→E. One of the most fundamental voice-leading patterns in tonal music, drilled in every theory class but invisible to most pop musicians.",
+    tags: ["harmony", "inversion", "voice leading", "passing chords", "classical"],
+    audio: {
+      tempo: 80,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["D3", "G3", "B3", "D4"], duration: "2n" },
+        { notes: ["E3", "G3", "C4", "E4"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "chromatic-dominant-passing",
+    name: "Chromatic Dominant Passing Chord",
+    category: "harmonic-devices",
+    description:
+      "A dominant 7th chord built on a chromatic degree, used to connect two diatonic chords by half-step bass motion. Not a secondary dominant (it doesn't resolve to a diatonic chord a 4th above) — it just passes through. bVII7 between I and vi, or #I7 between I and ii. The dominant quality gives each step weight and direction even though it's just passing by.",
+    tags: ["harmony", "dominant", "chromatic", "passing chords", "jazz"],
+    audio: {
+      tempo: 85,
+      events: [
+        { notes: ["C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["C#3", "F3", "G#3", "B3"], duration: "2n" },
+        { notes: ["D3", "F3", "A3", "C4"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "diatonic-passing-chords",
+    name: "Diatonic Passing Chords",
+    category: "harmonic-devices",
+    description:
+      "Chords built on scale degrees between two target chords, filling the gap with diatonic harmony. I → ii → iii → IV uses ii and iii as passing chords. No chromaticism needed — the diatonic scale provides enough intermediate harmonies to smooth any jump. Less dramatic than chromatic passing chords but more natural-sounding. The backbone of hymn harmonization and folk arranging.",
+    tags: ["harmony", "diatonic", "stepwise", "passing chords", "folk", "hymn"],
+    audio: {
+      tempo: 80,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["D3", "F3", "A3"], duration: "4n" },
+        { notes: ["E3", "G3", "B3"], duration: "4n" },
+        { notes: ["F3", "A3", "C4"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "passing-minor-iv",
+    name: "Passing iv (I → IV → iv → I)",
+    category: "progressions",
+    description:
+      "The minor iv chord passes between IV and I, creating a chromatic descent in one voice (A→Ab→G in C major). The shift from major IV to minor iv is a moment of bittersweet shadow before resolving home. One of the most emotionally potent two-chord moves in all of pop music. Radiohead, Adele, and every songwriter who ever wanted to make a listener cry.",
+    tags: ["progression", "borrowed", "minor iv", "chromatic", "passing chords", "emotional"],
+    audio: {
+      tempo: 80,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["F3", "A3", "C4"], duration: "2n" },
+        { notes: ["F3", "Ab3", "C4"], duration: "2n" },
+        { notes: ["C3", "E3", "G3"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "chromatic-walkdown-passing",
+    name: "Chromatic Walkdown with Passing Chords",
+    category: "harmonic-devices",
+    description:
+      "A descending chromatic bass line where every half step gets its own chord on top. I → I/7 → I/b7 → I/6 → IV, or V → bV → IV → bIV → I. Each passing chord is harmonized to create smooth voice leading above the moving bass. The emotional weight comes from the relentless downward pull — gravity made audible. Film scores, R&B ballads, and baroque chaconnes all depend on this.",
+    tags: ["harmony", "chromatic", "descending", "bass line", "passing chords", "film"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["B2", "D3", "G3"], duration: "2n" },
+        { notes: ["Bb2", "D3", "G3"], duration: "2n" },
+        { notes: ["A2", "C3", "F3"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "chromatic-walkup-passing",
+    name: "Chromatic Walkup with Passing Chords",
+    category: "harmonic-devices",
+    description:
+      "An ascending chromatic bass line harmonized at every step — the opposite of the walkdown. I → #Idim → ii → #IIdim → iii, or IV → #IVdim → V. Each chromatic step builds tension and momentum. The upward motion feels like climbing toward a summit. Gospel, ragtime, and musical theater use ascending chromatic passing chords to build excitement before a big arrival.",
+    tags: ["harmony", "chromatic", "ascending", "bass line", "passing chords", "gospel"],
+    audio: {
+      tempo: 85,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["C#3", "E3", "G3", "Bb3"], duration: "4n" },
+        { notes: ["D3", "F3", "A3"], duration: "2n" },
+        { notes: ["D#3", "F#3", "A3", "C4"], duration: "4n" },
+        { notes: ["E3", "G3", "B3"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "passing-augmented-sixth",
+    name: "Passing Augmented 6th Chord",
+    category: "harmonic-devices",
+    description:
+      "An augmented 6th chord (Italian, French, or German) used in passing rather than as a pre-dominant. The augmented 6th interval expands outward by half step in contrary motion, connecting two chords with maximum voice-leading efficiency. When used as a passing chord it's less dramatic than the textbook pre-dominant version — more of a sophisticated color than a structural event.",
+    tags: ["harmony", "augmented sixth", "chromatic", "passing chords", "classical", "voice leading"],
+    audio: {
+      tempo: 80,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["Ab2", "C3", "F#3"], duration: "2n" },
+        { notes: ["G2", "B2", "D3", "G3"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "tritone-sub-as-passing",
+    name: "Tritone Sub as Passing Chord",
+    category: "harmonic-devices",
+    description:
+      "A tritone substitution used not to replace V but as a chromatic passing chord between two diatonic chords. bII7 passes between ii and I (Db7 connecting Dm to C), creating a half-step bass descent. The tritone sub's dominant quality gives the passing motion direction and urgency. Jazz pianists drop these into standards the way chefs add salt — a little goes a long way.",
+    tags: ["harmony", "tritone sub", "jazz", "chromatic", "passing chords"],
+    audio: {
+      tempo: 90,
+      events: [
+        { notes: ["D3", "F3", "A3", "C4"], duration: "2n" },
+        { notes: ["Db3", "F3", "Ab3", "B3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "B3"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "double-chromatic-approach-chord",
+    name: "Double Chromatic Approach Chord",
+    category: "harmonic-devices",
+    description:
+      "Approaching a target chord from both a half step above AND below simultaneously — two passing chords that converge on the destination. The voices move in contrary motion, creating a pinching effect that locks onto the target with inevitability. Jazz arrangers use this for hits and accents; gospel musicians use it to intensify arrivals. Two steps of maximum tension compressed into one moment.",
+    tags: ["harmony", "chromatic", "approach", "passing chords", "jazz", "gospel"],
+    audio: {
+      tempo: 85,
+      events: [
+        { notes: ["Db3", "E3", "Ab3"], duration: "4n" },
+        { notes: ["B2", "Eb3", "G#3"], duration: "4n" },
+        { notes: ["C3", "E3", "G3"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "secondary-dominant-as-passing",
+    name: "Secondary Dominant as Passing Chord",
+    category: "harmonic-devices",
+    description:
+      "A secondary dominant (V/x) used in passing between two diatonic chords rather than resolving to its target. V/vi passes between I and IV; V/V passes between iii and I. The dominant quality propels the bass forward but the resolution is 'wrong' — the chord just passes through on its way somewhere else. Creates harmonic color without the commitment of actual tonicization.",
+    tags: ["harmony", "secondary dominant", "chromatic", "passing chords", "jazz", "pop"],
+    audio: {
+      tempo: 85,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["E3", "G#3", "B3", "D4"], duration: "2n" },
+        { notes: ["F3", "A3", "C4"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "neighbor-passing-chord",
+    name: "Neighbor Chord (Embellishing Passing Chord)",
+    category: "harmonic-devices",
+    description:
+      "A chord that moves away from a harmony by step and returns — like a passing chord that doubles back instead of continuing. I → ii → I or I → bVII → I. The neighbor chord decorates without progressing. Creates a gentle rocking motion, adding harmonic interest to a static passage. The difference between a 'passing' and 'neighbor' chord is whether it keeps going or comes home.",
+    tags: ["harmony", "neighbor", "embellishing", "passing chords", "stepwise"],
+    audio: {
+      tempo: 80,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["D3", "F3", "A3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3"], duration: "1n" },
       ],
     },
   },
