@@ -848,7 +848,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "A diminished 7th chord that shares a common tone with the chord it embellishes. Built a half step above the root of the target chord. Creates a shimmering chromatic neighbor effect — the chord briefly destabilizes before snapping back.",
-    tags: ["embellishing", "diminished", "common tone", "chromatic", "color"],
+    tags: ["embellishing", "diminished", "common tone", "chromatic", "color", "passing chords"],
     audio: {
       tempo: 90,
       events: [
@@ -1284,7 +1284,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "A diminished 7th chord on the raised 4th degree connects I to V with a chromatic bass line (C→C#→D→C in the bass with V in inversion, or C→F#→G). The diminished chord creates delicious tension that melts into the dominant. Hollywood loves this move.",
-    tags: ["progression", "jazz", "barbershop", "diminished", "passing", "chromatic"],
+    tags: ["progression", "jazz", "barbershop", "diminished", "passing chords", "chromatic"],
     audio: {
       tempo: 90,
       events: [
@@ -8513,7 +8513,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "A passing diminished chord connecting I to V — the ♯IV°7 fills the whole-step gap between IV and V with a chromatic, unstable sonority that resolves upward. The bass walks C → F# → G while the upper voices create a diminished-7th tension. Used constantly in barbershop, ragtime, jazz standards, and Disney music. The passing diminished is musical sleight of hand — it makes a simple I-V motion sound sophisticated.",
-    tags: ["progression", "diminished", "passing", "chromatic", "barbershop"],
+    tags: ["progression", "diminished", "passing chords", "chromatic", "barbershop"],
     audio: {
       tempo: 80,
       events: [
@@ -8563,7 +8563,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "A chromatic bass walkup: C → F → F# → G. The IV provides a strong subdominant foundation; the ♯IV°7 is a chromatic passing chord that creates tension; V resolves it. The smoothest possible approach to V — three half-steps in the bass over four chords. Used in gospel, barbershop, ragtime, and every Disney movie ever made. The bass line does all the work; the upper voices just follow along.",
-    tags: ["progression", "walkup", "diminished", "gospel", "disney"],
+    tags: ["progression", "walkup", "diminished", "gospel", "disney", "passing chords"],
     audio: {
       tempo: 80,
       events: [
@@ -9797,7 +9797,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "A series of diminished chords connecting diatonic chords by half step — each diminished chord fills the chromatic gap between two diatonic bass notes. I → #I°7 → ii → #II°7 → iii. The bass walks chromatically while the diminished chords provide smooth voice leading. The sound of barbershop quartets, ragtime, and golden-age musical theater. Each diminished chord creates a moment of delicious tension before the next resolution.",
-    tags: ["harmony", "diminished", "passing", "chromatic", "barbershop"],
+    tags: ["harmony", "diminished", "passing chords", "chromatic", "barbershop"],
     audio: {
       tempo: 80,
       events: [
@@ -10511,7 +10511,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "Using a diminished seventh chord built a half step below any target chord as a chromatic approach — the dim7 resolves upward by half step into the target. Works for every scale degree: #I°7 → ii, #II°7 → iii, #IV°7 → V, etc. The diminished seventh's symmetry means it can approach any chord, not just the tonic. This gives you a chromatic passing chord toolkit that connects any two diatonic chords with maximum smoothness.",
-    tags: ["harmony", "diminished", "approach", "chromatic", "universal"],
+    tags: ["harmony", "diminished", "approach", "chromatic", "universal", "passing chords"],
     audio: {
       tempo: 80,
       events: [

@@ -2,9 +2,20 @@ import { forwardRef, useState } from "react";
 import type { Concept } from "../types/concept";
 import { PianoRoll } from "./PianoRoll";
 
+function highlightText(text: string, term: string): React.ReactNode {
+  if (!term || term.length < 2) return text;
+  const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
+  const parts = text.split(regex);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) =>
+    regex.test(part) ? <mark key={i} className="search-highlight">{part}</mark> : part
+  );
+}
+
 interface ConceptCardProps {
   concept: Concept;
   highlight?: boolean;
+  searchTerm?: string;
   isPlaying: boolean;
   isFavorite: boolean;
   onPlay: () => void;
@@ -18,7 +29,7 @@ interface ConceptCardProps {
 
 export const ConceptCard = forwardRef<HTMLDivElement, ConceptCardProps>(
   function ConceptCard(
-    { concept, highlight, isPlaying, isFavorite, onPlay, onStop, onExportMidi, onMidiDragStart, onToggleFavorite, onTagClick, onSendToSketch },
+    { concept, highlight, searchTerm, isPlaying, isFavorite, onPlay, onStop, onExportMidi, onMidiDragStart, onToggleFavorite, onTagClick, onSendToSketch },
     ref
   ) {
     const [showRoll, setShowRoll] = useState(false);
@@ -29,7 +40,7 @@ export const ConceptCard = forwardRef<HTMLDivElement, ConceptCardProps>(
         className={`concept-card${highlight ? " highlight" : ""}${isPlaying ? " playing" : ""}`}
       >
         <div className="concept-header">
-          <h3 className="concept-name">{concept.name}</h3>
+          <h3 className="concept-name">{searchTerm ? highlightText(concept.name, searchTerm) : concept.name}</h3>
           <div className="concept-actions">
             <button
               className={`btn-fav${isFavorite ? " active" : ""}`}
@@ -89,7 +100,7 @@ export const ConceptCard = forwardRef<HTMLDivElement, ConceptCardProps>(
         {showRoll && (
           <PianoRoll audio={concept.audio} isPlaying={isPlaying} onPlay={onPlay} onStop={onStop} />
         )}
-        <p className="concept-description">{concept.description}</p>
+        <p className="concept-description">{searchTerm ? highlightText(concept.description, searchTerm) : concept.description}</p>
         <div className="concept-tags">
           {concept.tags.map((tag) => (
             <button key={tag} className="tag" onClick={() => onTagClick(tag)}>

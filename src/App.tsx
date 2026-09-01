@@ -78,6 +78,7 @@ function App() {
   const [sketchImport, setSketchImport] = useState<import("./types/concept").AudioData | null>(null);
   const [inspoSettings, setInspoSettings] = useState<InspirationSet | null>(null);
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     const saved = localStorage.getItem("theme");
     return saved === "light" ? "light" : "dark";
@@ -286,6 +287,7 @@ function App() {
         }
       }
       setCurrentCategory(current);
+      setShowScrollTop(main.scrollTop > 400);
     };
 
     main.addEventListener("scroll", onScroll, { passive: true });
@@ -508,6 +510,7 @@ function App() {
                     ref={(el) => { cardRefs.current[concept.id] = el; }}
                     concept={concept}
                     highlight={highlightId === concept.id}
+                    searchTerm={search}
                     isPlaying={playingId === concept.id}
                     isFavorite={favorites.has(concept.id)}
                     onPlay={() => play(concept.id, concept.audio)}
@@ -531,6 +534,16 @@ function App() {
             <p className="empty">No concepts match your search.</p>
           )}
         </div>
+        {showScrollTop && (
+          <button
+            className="scroll-top-btn"
+            onClick={() => document.querySelector(".main")?.scrollTo({ top: 0, behavior: "smooth" })}
+            aria-label="Scroll to top"
+            title="Back to top"
+          >
+            ↑
+          </button>
+        )}
       </main>
       <ContrastModal open={showContrast} onClose={() => setShowContrast(false)} />
       <InspirationGenerator
