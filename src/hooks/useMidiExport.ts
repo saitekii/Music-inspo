@@ -7,6 +7,11 @@ function sanitizeFilename(name: string): string {
   return `${name.replace(/[^a-zA-Z0-9-_ ]/g, "").replace(/\s+/g, "-")}.mid`;
 }
 
+function midiToBlob(midi: Midi): Blob {
+  const arr = midi.toArray();
+  return new Blob([new Uint8Array(arr.buffer as ArrayBuffer, arr.byteOffset, arr.byteLength)], { type: "audio/midi" });
+}
+
 function buildMidi(name: string, audio: AudioData): Midi {
   const midi = new Midi();
   midi.header.setTempo(audio.tempo);
@@ -38,7 +43,7 @@ function buildMidi(name: string, audio: AudioData): Midi {
 export function useMidiExport() {
   const exportMidi = useCallback((name: string, audio: AudioData) => {
     const midi = buildMidi(name, audio);
-    const blob = new Blob([midi.toArray()], { type: "audio/midi" });
+    const blob = midiToBlob(midi);
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
@@ -49,7 +54,7 @@ export function useMidiExport() {
 
   function getMidiDragUrl(name: string, audio: AudioData): string {
     const midi = buildMidi(name, audio);
-    const blob = new Blob([midi.toArray()], { type: "audio/midi" });
+    const blob = midiToBlob(midi);
     const url = URL.createObjectURL(blob);
     const filename = sanitizeFilename(name);
     return `audio/midi:${filename}:${url}`;

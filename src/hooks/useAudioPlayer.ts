@@ -14,6 +14,7 @@ export const SYNTH_PRESETS = [
   { id: "bright", label: "✨ Bright Keys" },
   { id: "bell", label: "🔔 Bell / Vibes" },
   { id: "retro", label: "👾 Retro Square" },
+  { id: "fm-bass", label: "🎸 FM Bass" },
 ] as const;
 
 export type SynthPresetId = (typeof SYNTH_PRESETS)[number]["id"];
@@ -77,6 +78,16 @@ export function createSynth(presetId: SynthPresetId): Tone.PolySynth {
         oscillator: { type: "square" },
         envelope: { attack: 0.005, decay: 0.2, sustain: 0.5, release: 0.3 },
         volume: -18,
+      });
+    case "fm-bass":
+      return new Tone.PolySynth(Tone.FMSynth, {
+        harmonicity: 1,
+        modulationIndex: 3,
+        oscillator: { type: "sine" },
+        modulation: { type: "square" },
+        envelope: { attack: 0.01, decay: 0.3, sustain: 0.4, release: 0.2 },
+        modulationEnvelope: { attack: 0.01, decay: 0.2, sustain: 0.3, release: 0.1 },
+        volume: -14,
       });
   }
 }

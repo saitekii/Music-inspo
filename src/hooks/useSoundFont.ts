@@ -35,7 +35,7 @@ export function useSoundFont() {
         if (buffers[noteName]) continue;
 
         const audioBuffer = ctx.createBuffer(1, sample.buffer.length, sample.sampleRate);
-        audioBuffer.copyToChannel(sample.buffer, 0);
+        audioBuffer.copyToChannel(new Float32Array(sample.buffer), 0);
         buffers[noteName] = new Tone.ToneAudioBuffer(audioBuffer);
       }
 

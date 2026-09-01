@@ -224,8 +224,6 @@ export function extendChordNotes(
   const newNotes = [...notes];
 
   for (const interval of extensionIntervals) {
-    const targetPc = (analysis.root + (interval % 12)) % 12;
-    // Check if this pitch class already exists in the chord
     if (intervals.includes(interval % 12)) continue;
 
     // Place the extension above the highest existing note

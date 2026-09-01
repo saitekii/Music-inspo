@@ -1120,7 +1120,8 @@ export function SketchComposer({ open, onClose, importAudio, onImportDone, inspo
         });
       }
     }
-    const blob = new Blob([midi.toArray()], { type: "audio/midi" });
+    const arr = midi.toArray();
+    const blob = new Blob([new Uint8Array(arr.buffer as ArrayBuffer, arr.byteOffset, arr.byteLength)], { type: "audio/midi" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
