@@ -16496,6 +16496,349 @@ const _concepts: Concept[] = [
       ],
     },
   },
+
+  // ── Voice Leading ─────────────────────────────────────────
+  {
+    id: "vl-common-tone",
+    name: "Common-Tone Voice Leading",
+    category: "voice-leading",
+    description:
+      "When two chords share one or more notes, hold those notes in the same voice and move only the voices that need to change. C major (C-E-G) to A minor (A-C-E) shares C and E — only G moves to A. The shared notes create continuity while the moving voice provides harmonic change. The foundation of all smooth voice leading.",
+    tags: ["voice leading", "common tone", "smooth", "fundamental"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["C3", "E3", "A3", "C4"], duration: "2n" },
+        { notes: ["C3", "F3", "A3", "C4"], duration: "2n" },
+        { notes: ["B2", "F3", "G3", "B3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-stepwise-motion",
+    name: "Stepwise Voice Leading",
+    category: "voice-leading",
+    description:
+      "Every voice moves by step (half or whole step) or stays put — no leaps. The smoothest possible connection between any two chords. When all four voices move by step, chord changes feel like a continuous flow rather than discrete jumps. This is why jazz voicings sound so liquid compared to block strumming.",
+    tags: ["voice leading", "stepwise", "smooth", "jazz", "fundamental"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["B2", "D3", "F3", "A3"], duration: "2n" },
+        { notes: ["Bb2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["A2", "C3", "E3", "A3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-contrary-motion",
+    name: "Contrary Motion",
+    category: "voice-leading",
+    description:
+      "Two voices move in opposite directions — one ascending while the other descends. Creates a sense of expansion (voices diverging) or compression (voices converging). The most independent-sounding voice relationship. Bach uses it constantly. In film scoring, converging voices build tension; diverging voices release it.",
+    tags: ["voice leading", "contrary motion", "counterpoint", "independence"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["E3", "C4"], duration: "2n" },
+        { notes: ["D3", "D4"], duration: "2n" },
+        { notes: ["C3", "E4"], duration: "2n" },
+        { notes: ["B2", "F4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-parallel-motion",
+    name: "Parallel Motion",
+    category: "voice-leading",
+    description:
+      "Two or more voices move in the same direction by the same interval — parallel thirds, parallel sixths, or parallel triads. Classical theory restricts parallel fifths and octaves, but parallel thirds and sixths sound lush and are used everywhere. Debussy broke the rules with parallel fifths and it sounded incredible.",
+    tags: ["voice leading", "parallel", "thirds", "sixths", "debussy"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "E3"], duration: "2n" },
+        { notes: ["D3", "F3"], duration: "2n" },
+        { notes: ["E3", "G3"], duration: "2n" },
+        { notes: ["F3", "A3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-oblique-motion",
+    name: "Oblique Motion",
+    category: "voice-leading",
+    description:
+      "One voice holds a note while the other voice moves. The stationary voice becomes an anchor — a reference point that makes the moving voice's motion feel deliberate. Pedal tones are oblique motion taken to the extreme. It's how you create harmonic change while maintaining continuity.",
+    tags: ["voice leading", "oblique", "pedal", "anchor", "continuity"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "G3"], duration: "2n" },
+        { notes: ["C3", "A3"], duration: "2n" },
+        { notes: ["C3", "B3"], duration: "2n" },
+        { notes: ["C3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-voice-crossing",
+    name: "Voice Crossing",
+    category: "voice-leading",
+    description:
+      "A lower voice temporarily moves above a higher voice, or vice versa. The voices swap registers, creating a brief moment of timbral ambiguity. Used sparingly it adds interest; used carelessly it creates mud. Jazz pianists cross voices constantly in their voicings — the alto voice dips below the tenor for one chord, then comes back.",
+    tags: ["voice leading", "crossing", "voicing", "jazz", "texture"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["E3", "G3", "C4"], duration: "2n" },
+        { notes: ["F3", "A3", "D4"], duration: "2n" },
+        { notes: ["A3", "F3", "C4"], duration: "2n" },
+        { notes: ["G3", "E3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-chromatic-voice-leading",
+    name: "Chromatic Voice Leading",
+    category: "voice-leading",
+    description:
+      "Voices move by half step between chords, even when the chords themselves aren't chromatically related. Cmaj7 (C-E-G-B) to Dbmaj7 (Db-F-Ab-C): every voice shifts up one semitone. The smallest possible motion creates the biggest harmonic surprise. This is how Coltrane changes and chromatic mediants actually work at the voice level.",
+    tags: ["voice leading", "chromatic", "semitone", "coltrane", "surprise"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["Db3", "F3", "Ab3", "C4"], duration: "2n" },
+        { notes: ["D3", "F#3", "A3", "C#4"], duration: "2n" },
+        { notes: ["Eb3", "G3", "Bb3", "D4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-drop-2-voicing",
+    name: "Drop 2 Voicings",
+    category: "voice-leading",
+    description:
+      "Take a close-position chord and drop the second-highest note down an octave. Cmaj7 close (B-C-E-G) becomes Drop 2 (E-B-C-G). This opens up the voicing, puts it in a guitar/piano-friendly range, and creates beautiful voice leading between chords. The standard jazz guitar and piano voicing technique.",
+    tags: ["voice leading", "voicing", "drop 2", "jazz", "guitar"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["E3", "B3", "C4", "G4"], duration: "2n" },
+        { notes: ["D3", "A3", "B3", "F4"], duration: "2n" },
+        { notes: ["C3", "G3", "A3", "E4"], duration: "2n" },
+        { notes: ["B2", "F3", "G3", "D4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-close-vs-open",
+    name: "Close vs Open Position",
+    category: "voice-leading",
+    description:
+      "Close position: all chord tones within one octave (C-E-G-B). Open position: spread across more than an octave (C-G-B-E). Close position sounds dense and punchy. Open position sounds spacious and orchestral. The same four notes feel completely different depending on how far apart you spread them. Arrangers switch between the two for contrast.",
+    tags: ["voice leading", "voicing", "close position", "open position", "arranging"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "B3"], duration: "4n" },
+        { notes: ["C3", "G3", "B3", "E4"], duration: "2n" },
+        { notes: ["C3", "G3", "B3", "E4"], duration: "4n" },
+      ],
+    },
+  },
+  {
+    id: "vl-resolution-tendency",
+    name: "Tendency Tones & Resolution",
+    category: "voice-leading",
+    description:
+      "Certain notes want to resolve in specific directions: the leading tone (7th degree) pulls up to the tonic, the 4th degree pulls down to the 3rd, the tritone in a dominant 7th wants to resolve inward or outward. Understanding these tendencies lets you either satisfy them (resolution) or deny them (surprise). Every musical emotion lives in this tension.",
+    tags: ["voice leading", "resolution", "tendency", "tension-release", "fundamental"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["B2", "D3", "F3", "B3"], duration: "2n" },
+        { notes: ["C3", "C3", "E3", "C4"], duration: "2n" },
+        { notes: ["G2", "B2", "F3", "G3"], duration: "2n" },
+        { notes: ["C3", "C3", "E3", "G3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-suspension-resolution",
+    name: "Suspension & Resolution (4-3, 7-6, 9-8)",
+    category: "voice-leading",
+    description:
+      "Hold a note from the previous chord while the other voices change, creating a dissonance that then resolves by step. A 4-3 suspension holds the 4th over a new chord then drops to the 3rd. The moment of friction before resolution is what makes suspensions so expressive — you feel the pull.",
+    tags: ["voice leading", "suspension", "resolution", "dissonance", "tension-release"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["C3", "F3", "A3", "C4"], duration: "2n" },
+        { notes: ["G2", "F3", "G3", "D4"], duration: "2n" },
+        { notes: ["G2", "E3", "G3", "D4"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-retardation",
+    name: "Retardation (Upward Suspension)",
+    category: "voice-leading",
+    description:
+      "Like a suspension but the held note resolves upward instead of downward. The 7th holds over and resolves up to the octave (7-8), or the 2nd resolves up to the 3rd. Less common than downward suspensions, so it sounds slightly unexpected. Creates an uplifting, yearning quality — the voice is reaching up to its resolution.",
+    tags: ["voice leading", "retardation", "suspension", "resolution", "yearning"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["G2", "B2", "D3", "G3"], duration: "2n" },
+        { notes: ["C3", "B2", "E3", "G3"], duration: "2n" },
+        { notes: ["C3", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "vl-anticipation",
+    name: "Anticipation",
+    category: "voice-leading",
+    description:
+      "A note from the next chord arrives early — before the other voices change. The opposite of a suspension: instead of holding the old note too long, one voice jumps to the new note too soon. Creates a sense of eagerness and forward pull. Common in pop melodies and gospel piano where the melody anticipates the chord change.",
+    tags: ["voice leading", "anticipation", "forward motion", "pop", "gospel"],
+    audio: {
+      tempo: 76,
+      events: [
+        { notes: ["F3", "A3", "C4"], duration: "4n" },
+        { notes: ["F3", "A3", "B3"], duration: "4n" },
+        { notes: ["E3", "G3", "B3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+
+  // ── Inversions ────────────────────────────────────────────
+  {
+    id: "inv-root-position",
+    name: "Root Position (5/3)",
+    category: "voice-leading",
+    description:
+      "The root of the chord is in the bass. The most stable, grounded sound — the chord is 'standing on its own feet.' Root position chords define key centers and create strong bass lines. When you want clarity and authority, root position is the default. But using it for every chord makes the bass line jumpy.",
+    tags: ["inversion", "root position", "stable", "bass", "fundamental"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["F3", "A3", "C4", "F4"], duration: "2n" },
+        { notes: ["G3", "B3", "D4", "G4"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "inv-first-inversion",
+    name: "First Inversion (6/3)",
+    category: "voice-leading",
+    description:
+      "The 3rd of the chord is in the bass. Lighter and less grounded than root position — the chord floats. First inversions are the voice leading workhorse: they let you create smooth, stepwise bass lines between chords. C/E → F → G/B → C gives you a rising bass (E-F-G-C) instead of jumps (C-F-G-C).",
+    tags: ["inversion", "first inversion", "slash chord", "bass", "voice leading"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["E2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["F2", "A2", "C3", "F3"], duration: "2n" },
+        { notes: ["B2", "D3", "G3", "B3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "inv-second-inversion",
+    name: "Second Inversion (6/4)",
+    category: "voice-leading",
+    description:
+      "The 5th of the chord is in the bass. Inherently unstable — the bass note doesn't feel like the root, creating ambiguity. In classical theory, second inversions are restricted to three specific uses: cadential (I6/4 before V), passing (between two positions of the same chord), and pedal (over a held bass). In pop and jazz, that instability is a feature, not a bug.",
+    tags: ["inversion", "second inversion", "unstable", "ambiguous", "cadential"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["G2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["G2", "B2", "D3", "G3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "1n" },
+      ],
+    },
+  },
+  {
+    id: "inv-third-inversion",
+    name: "Third Inversion (4/2)",
+    category: "voice-leading",
+    description:
+      "The 7th of a seventh chord is in the bass — like Cmaj7/B or G7/F. The most dissonant inversion because the bass note forms a half step or whole step against the root above it. That friction makes third inversions incredibly useful as passing chords: the bass wants to resolve down by step, pulling the harmony forward.",
+    tags: ["inversion", "third inversion", "seventh chord", "passing chords", "tension"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["F2", "G2", "B2", "D3"], duration: "2n" },
+        { notes: ["E2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["B2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "inv-choosing-inversions",
+    name: "Choosing Inversions for Bass Lines",
+    category: "voice-leading",
+    description:
+      "The art of picking which inversion of each chord creates the best bass line. The same I→IV→V→I progression sounds completely different with bass lines C-F-G-C (all root) vs. C-C-B-C (common tone + step) vs. E-F-G-C (ascending). The chords are identical — only the bass voice changes. This is why arrangers think in bass lines, not just chord symbols.",
+    tags: ["inversion", "bass", "voice leading", "arranging", "slash chord"],
+    audio: {
+      tempo: 72,
+      events: [
+        { notes: ["E2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["F2", "A2", "C3", "F3"], duration: "2n" },
+        { notes: ["G2", "B2", "D3", "G3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-parsimonious",
+    name: "Parsimonious Voice Leading (Neo-Riemannian)",
+    category: "voice-leading",
+    description:
+      "Moving between chords by changing just one note by one semitone. C major (C-E-G) → C minor (C-Eb-G) → Ab major (C-Eb-Ab) → Ab minor (Cb-Eb-Ab). Each chord is one note away from the next, but the harmonic distance traveled is enormous. This is how film composers move between distant keys without it sounding random — every step is tiny but the journey is vast.",
+    tags: ["voice leading", "neo-riemannian", "chromatic", "film", "transformation"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["C3", "E3", "G3"], duration: "2n" },
+        { notes: ["C3", "Eb3", "G3"], duration: "2n" },
+        { notes: ["C3", "Eb3", "Ab3"], duration: "2n" },
+        { notes: ["B2", "Eb3", "Ab3"], duration: "2n" },
+      ],
+    },
+  },
+  {
+    id: "vl-voice-exchange",
+    name: "Voice Exchange",
+    category: "voice-leading",
+    description:
+      "Two voices swap notes: the bass takes the soprano's note while the soprano takes the bass's note. In C major: bass goes C→E while soprano goes E→C, or bass C→G while soprano G→C. The chord stays the same but the voicing inverts. Creates smooth motion with zero harmonic change — pure voice-leading elegance.",
+    tags: ["voice leading", "exchange", "inversion", "counterpoint", "elegant"],
+    audio: {
+      tempo: 68,
+      events: [
+        { notes: ["C3", "E3", "G3", "C4"], duration: "2n" },
+        { notes: ["E3", "E3", "G3", "G3"], duration: "4n" },
+        { notes: ["E3", "E3", "G3", "C4"], duration: "4n" },
+        { notes: ["E2", "C3", "G3", "C4"], duration: "2n" },
+      ],
+    },
+  },
 ];
 
 export const concepts: Concept[] = _concepts.map((c) =>

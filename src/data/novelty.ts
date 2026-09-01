@@ -141,4 +141,40 @@ export const PROGRESSION_NOVELTY: Record<string, number> = {
   // 9 — Highly experimental
   "prog-extended-chord-planing": 9,
   "prog-louis-cole-orchestral": 9,
+
+  // ── Non-tonic-start progressions ──────────────────────────
+  "prog-vi-v-iv-v": 2,
+  "prog-vi-ii-v-i": 3,
+  "prog-vi-iv-ii-v": 3,
+  "prog-vi-v-iv-iii": 4,
+  "prog-vi-bvi-bvii-i": 5,
+  "prog-iii-vi-ii-v": 4,
+  "prog-iii-iv-v-vi": 4,
+  "prog-iii-ii-i": 3,
+  "prog-v-vi-iv-i": 3,
+  "prog-v-bvii-iv-i": 4,
+  "prog-v-iv-vi-i": 4,
+  "prog-bvii-bvi-v-i": 5,
+  "prog-bvii-i-bvii-iv": 4,
+  "prog-bii-v-i": 6,
+  "prog-bii-bvii-bvi-v": 7,
+  "prog-ii-iii-iv-v": 3,
+  "prog-ii-iv-v-vi": 3,
+  "prog-ii-v-vi": 4,
+  "prog-viio-i-iv-v": 5,
+  "prog-viio-iii-vi-ii": 6,
+
+  // ── Slash chord progressions ──────────────────────────────
+  "slash-chord-walkdown": 3,
+  "slash-chord-walkup": 3,
+  "slash-chord-chromatic-bass": 5,
+  "slash-chord-pedal-bass": 4,
+  "slash-chord-dominant-pedal": 4,
+  "slash-chord-first-inversion-chain": 5,
+  "slash-chord-bass-contrary": 6,
+  "prog-slash-chord-descent": 3,
+  "prog-slash-chord-ascent": 3,
+
+  // ── Passing chord progressions ────────────────────────────
+  "passing-minor-iv": 5,
 };
