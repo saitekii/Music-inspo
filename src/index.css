@@ -996,6 +996,98 @@ body {
   align-items: center;
 }
 
+.btn-tags {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+.btn-tags:hover { background: rgba(255, 255, 255, 0.1); }
+.btn-tags.active {
+  background: rgba(120, 80, 255, 0.25);
+  border-color: rgba(120, 80, 255, 0.4);
+  color: #fff;
+}
+[data-theme="light"] .btn-tags {
+  border-color: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.04);
+  color: rgba(0, 0, 0, 0.6);
+}
+[data-theme="light"] .btn-tags.active {
+  background: rgba(120, 80, 255, 0.15);
+  color: #333;
+}
+
+.tag-explorer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 0 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.tag-explorer-item {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.tag-explorer-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.tag-explorer-item.active {
+  background: rgba(120, 80, 255, 0.3);
+  border-color: rgba(120, 80, 255, 0.5);
+  color: #fff;
+}
+.tag-count {
+  font-size: 10px;
+  opacity: 0.5;
+  margin-left: 2px;
+}
+[data-theme="light"] .tag-explorer-item {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.04);
+  color: rgba(0, 0, 0, 0.6);
+}
+[data-theme="light"] .tag-explorer-item.active {
+  background: rgba(120, 80, 255, 0.15);
+  color: #333;
+}
+
+.active-tag-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: rgba(120, 80, 255, 0.2);
+  color: rgba(200, 180, 255, 0.9);
+}
+.btn-clear-tag {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 2px;
+  opacity: 0.7;
+}
+.btn-clear-tag:hover { opacity: 1; }
+[data-theme="light"] .active-tag-filter {
+  background: rgba(120, 80, 255, 0.12);
+  color: #555;
+}
+
 .search-highlight {
   background: rgba(255, 200, 50, 0.3);
   color: inherit;

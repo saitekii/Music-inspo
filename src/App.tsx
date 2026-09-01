@@ -79,6 +79,8 @@ function App() {
   const [inspoSettings, setInspoSettings] = useState<InspirationSet | null>(null);
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [showTagExplorer, setShowTagExplorer] = useState(false);
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     const saved = localStorage.getItem("theme");
     return saved === "light" ? "light" : "dark";
@@ -119,7 +121,8 @@ function App() {
   }, []);
 
   const handleTagClick = useCallback((tag: string) => {
-    setSearch(tag);
+    setSelectedTag(tag);
+    setShowTagExplorer(false);
     document.querySelector(".main")?.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
@@ -232,6 +235,16 @@ function App() {
     return c;
   }, [categories]);
 
+  const allTags = useMemo(() => {
+    const tagMap = new Map<string, number>();
+    for (const c of concepts) {
+      for (const t of c.tags) {
+        tagMap.set(t, (tagMap.get(t) ?? 0) + 1);
+      }
+    }
+    return [...tagMap.entries()].sort((a, b) => b[1] - a[1]);
+  }, []);
+
   const filtered = useMemo(() => {
     let result = concepts;
     if (showFavoritesOnly) {
@@ -249,6 +262,9 @@ function App() {
     if (selectedCategory) {
       result = result.filter((c) => c.category === selectedCategory);
     }
+    if (selectedTag) {
+      result = result.filter((c) => c.tags.includes(selectedTag));
+    }
     if (search.trim()) {
       const q = search.toLowerCase();
       result = result.filter(
@@ -259,7 +275,7 @@ function App() {
       );
     }
     return result;
-  }, [selectedCategory, search, moodConceptIds, selectedGenre, functionConceptIds, showFavoritesOnly, favorites]);
+  }, [selectedCategory, search, selectedTag, moodConceptIds, selectedGenre, functionConceptIds, showFavoritesOnly, favorites]);
 
   const grouped = useMemo(() => {
     const groups: Partial<Record<Category, typeof filtered>> = {};
@@ -340,6 +356,9 @@ function App() {
           </button>
           <button className="btn-inspo" onClick={() => setShowInspo(true)} title="Random inspiration generator">
             Inspire
+          </button>
+          <button className={`btn-tags${showTagExplorer ? " active" : ""}`} onClick={() => setShowTagExplorer(!showTagExplorer)} title="Explore tags">
+            Tags
           </button>
           <div className="soundfont-controls">
             {!sfFileName && (
@@ -475,9 +494,15 @@ function App() {
             </select>
           </label>
         </div>
-        {(selectedMood || selectedGenre || selectedFunction || selectedCategory || search || showFavoritesOnly) && (
+        {(selectedMood || selectedGenre || selectedFunction || selectedCategory || search || showFavoritesOnly || selectedTag) && (
           <div className="filter-summary">
             <span className="filter-count">{filtered.length} concept{filtered.length !== 1 ? "s" : ""}</span>
+            {selectedTag && (
+              <span className="active-tag-filter">
+                tag: {selectedTag}
+                <button className="btn-clear-tag" onClick={() => setSelectedTag(null)} aria-label="Clear tag filter">×</button>
+              </span>
+            )}
             <button
               className="btn-clear-filters"
               onClick={() => {
@@ -486,6 +511,7 @@ function App() {
                 setSelectedFunction(null);
                 setSelectedCategory(null);
                 setSearch("");
+                setSelectedTag(null);
                 setShowFavoritesOnly(false);
               }}
             >
@@ -495,6 +521,22 @@ function App() {
         )}
         {currentCategory && (
           <div className="current-category-indicator">{currentCategory}</div>
+        )}
+        {showTagExplorer && (
+          <div className="tag-explorer">
+            {allTags.map(([tag, count]) => (
+              <button
+                key={tag}
+                className={`tag-explorer-item${selectedTag === tag ? " active" : ""}`}
+                onClick={() => {
+                  setSelectedTag(selectedTag === tag ? null : tag);
+                  document.querySelector(".main")?.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                {tag} <span className="tag-count">{count}</span>
+              </button>
+            ))}
+          </div>
         )}
         </div>
         <div className="content">
