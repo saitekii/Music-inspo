@@ -265,6 +265,9 @@ function App() {
     for (const concept of filtered) {
       (groups[concept.category] ??= []).push(concept);
     }
+    if (groups.progressions) {
+      groups.progressions.sort((a, b) => (a.novelty ?? 10) - (b.novelty ?? 10));
+    }
     return groups;
   }, [filtered]);
 

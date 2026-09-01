@@ -96,6 +96,14 @@ export const ConceptCard = forwardRef<HTMLDivElement, ConceptCardProps>(
               {tag}
             </button>
           ))}
+          {concept.novelty !== undefined && (
+            <span
+              className="novelty-badge"
+              title={`Novelty ${concept.novelty}/9 — ${concept.novelty <= 2 ? "very common" : concept.novelty <= 4 ? "well-known" : concept.novelty <= 6 ? "less common" : concept.novelty <= 8 ? "uncommon" : "experimental"}`}
+            >
+              {"●".repeat(concept.novelty)}{"○".repeat(9 - concept.novelty)}
+            </span>
+          )}
         </div>
       </div>
     );

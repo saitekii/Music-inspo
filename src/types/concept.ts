@@ -38,6 +38,7 @@ export interface Concept {
   description: string;
   tags: string[];
   audio: AudioData;
+  novelty?: number;
 }
 
 export const CATEGORY_LABELS: Record<Category, string> = {

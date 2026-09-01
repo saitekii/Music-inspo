@@ -1,6 +1,7 @@
 import type { Concept } from "../types/concept";
+import { PROGRESSION_NOVELTY } from "./novelty";
 
-export const concepts: Concept[] = [
+const _concepts: Concept[] = [
   // ── Cadences ──────────────────────────────────────────────
   {
     id: "authentic-cadence",
@@ -15718,3 +15719,9 @@ export const concepts: Concept[] = [
     },
   },
 ];
+
+export const concepts: Concept[] = _concepts.map((c) =>
+  c.category === "progressions" && PROGRESSION_NOVELTY[c.id] !== undefined
+    ? { ...c, novelty: PROGRESSION_NOVELTY[c.id] }
+    : c
+);
