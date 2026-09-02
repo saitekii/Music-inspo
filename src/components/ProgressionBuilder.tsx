@@ -57,10 +57,14 @@ export function ProgressionBuilder({ open, onClose }: Props) {
 
   const [colorStep, setColorStep] = useState<{ root: string; reason: string } | null>(null);
   const [colorBass, setColorBass] = useState("");
+  const [recolorIdx, setRecolorIdx] = useState<number | null>(null);
+  const [dragIdx, setDragIdx] = useState<number | null>(null);
+  const [dragOverIdx, setDragOverIdx] = useState<number | null>(null);
 
   const synthRef = useRef<Tone.PolySynth | null>(null);
   const eventsRef = useRef<number[]>([]);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playingIdx, setPlayingIdx] = useState<number | null>(null);
   const { exportMidi } = useMidiExport();
 
   const bassNotes = Array.from({ length: 12 }, (_, i) => semiToNote(i, keyRoot));
@@ -70,6 +74,7 @@ export function ProgressionBuilder({ open, onClose }: Props) {
     eventsRef.current = [];
     synthRef.current?.releaseAll();
     setIsPlaying(false);
+    setPlayingIdx(null);
   }, []);
 
   const playAll = useCallback(() => {
@@ -100,14 +105,16 @@ export function ProgressionBuilder({ open, onClose }: Props) {
     };
 
     setIsPlaying(true);
+    setPlayingIdx(0);
     let offset = 0;
     const ids: number[] = [];
-    for (const ev of audio.events) {
+    audio.events.forEach((ev, idx) => {
       const durBeats = durMap[ev.duration] ?? 4;
       const durSec = durBeats * beatSec;
       const t = offset;
       ids.push(
         window.setTimeout(() => {
+          setPlayingIdx(idx);
           synth.releaseAll();
           if (ev.notes.length > 0) {
             synth.triggerAttackRelease(ev.notes, durSec * 0.9);
@@ -115,8 +122,8 @@ export function ProgressionBuilder({ open, onClose }: Props) {
         }, t * 1000)
       );
       offset += durSec;
-    }
-    ids.push(window.setTimeout(() => setIsPlaying(false), offset * 1000));
+    });
+    ids.push(window.setTimeout(() => { setIsPlaying(false); setPlayingIdx(null); }, offset * 1000));
     eventsRef.current = ids;
   }, [chords, tempo, stopPlayback]);
 
@@ -248,12 +255,22 @@ export function ProgressionBuilder({ open, onClose }: Props) {
         bass: colorBass,
         duration: pickDuration,
       };
-      setChords((prev) => [...prev, chord]);
-      playSingle(chord);
+      if (recolorIdx !== null) {
+        setChords((prev) => {
+          const next = [...prev];
+          next[recolorIdx] = { ...next[recolorIdx], quality, bass: colorBass || next[recolorIdx].bass };
+          return next;
+        });
+        playSingle({ ...chord, bass: colorBass || chords[recolorIdx]?.bass || "" });
+        setRecolorIdx(null);
+      } else {
+        setChords((prev) => [...prev, chord]);
+        playSingle(chord);
+      }
       setColorStep(null);
       setColorBass("");
     },
-    [colorStep, colorBass, pickDuration, playSingle]
+    [colorStep, colorBass, pickDuration, playSingle, recolorIdx, chords]
   );
 
   const previewColor = useCallback(
@@ -354,7 +371,32 @@ export function ProgressionBuilder({ open, onClose }: Props) {
             {chords.map((chord, i) => (
               <div
                 key={i}
-                className={`builder-chip${selectedIdx === i ? " selected" : ""}`}
+                className={`builder-chip${selectedIdx === i ? " selected" : ""}${playingIdx === i ? " playing" : ""}${dragOverIdx === i ? " drag-over" : ""}${dragIdx === i ? " dragging" : ""}`}
+                draggable
+                onDragStart={(e) => { setDragIdx(i); e.dataTransfer.effectAllowed = "move"; }}
+                onDragOver={(e) => { e.preventDefault(); setDragOverIdx(i); }}
+                onDragLeave={() => { if (dragOverIdx === i) setDragOverIdx(null); }}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  if (dragIdx !== null && dragIdx !== i) {
+                    setChords((prev) => {
+                      const next = [...prev];
+                      const [moved] = next.splice(dragIdx, 1);
+                      next.splice(i, 0, moved);
+                      return next;
+                    });
+                    if (selectedIdx === dragIdx) setSelectedIdx(i);
+                    else if (selectedIdx !== null) {
+                      const lo = Math.min(dragIdx, i), hi = Math.max(dragIdx, i);
+                      if (selectedIdx >= lo && selectedIdx <= hi) {
+                        setSelectedIdx(dragIdx < i ? selectedIdx - 1 : selectedIdx + 1);
+                      }
+                    }
+                  }
+                  setDragIdx(null);
+                  setDragOverIdx(null);
+                }}
+                onDragEnd={() => { setDragIdx(null); setDragOverIdx(null); }}
                 onClick={() => {
                   setSelectedIdx(selectedIdx === i ? null : i);
                   playSingle(chord);
@@ -363,8 +405,6 @@ export function ProgressionBuilder({ open, onClose }: Props) {
                 <span className="chip-name">{chordName(chord.root, chord.quality, chord.bass || undefined)}</span>
                 <span className="chip-dur">{chord.duration}</span>
                 <div className="chip-actions">
-                  <button onClick={(e) => { e.stopPropagation(); moveChord(i, -1); }} disabled={i === 0} title="Move left">‹</button>
-                  <button onClick={(e) => { e.stopPropagation(); moveChord(i, 1); }} disabled={i === chords.length - 1} title="Move right">›</button>
                   <button onClick={(e) => { e.stopPropagation(); removeChord(i); }} className="chip-remove" title="Remove">×</button>
                 </div>
               </div>
@@ -380,7 +420,7 @@ export function ProgressionBuilder({ open, onClose }: Props) {
             <div className="builder-color-header">
               <h3>What color for {colorStep.root}?</h3>
               <span className="builder-color-reason">{colorStep.reason}</span>
-              <button className="builder-color-back" onClick={() => setColorStep(null)}>Back</button>
+              <button className="builder-color-back" onClick={() => { setColorStep(null); setRecolorIdx(null); }}>Back</button>
             </div>
             <div className="builder-color-bass">
               {getBassOptions(colorStep.root, "major", keyRoot).map((opt) => (
@@ -428,6 +468,20 @@ export function ProgressionBuilder({ open, onClose }: Props) {
                   <span className="suggest-reason">{s.reason}</span>
                 </button>
               ))}
+              {lastChord && (
+                <button
+                  className="builder-suggest-btn recolor"
+                  onClick={() => {
+                    setRecolorIdx(chords.length - 1);
+                    setColorStep({ root: lastChord.root, reason: "Recolor — change voicing" });
+                    setColorBass(lastChord.bass || "");
+                  }}
+                  title="Change the voicing/quality of the last chord"
+                >
+                  <span className="suggest-name">{lastChord.root}</span>
+                  <span className="suggest-reason">Recolor last</span>
+                </button>
+              )}
             </div>
           </div>
         )}

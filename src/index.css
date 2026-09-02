@@ -2615,6 +2615,11 @@ body {
 }
 .builder-chip:hover { border-color: var(--card-hover-border); background: var(--bg-card-hover); }
 .builder-chip.selected { border-color: var(--accent); background: var(--accent-bg); }
+.builder-chip.playing { border-color: rgba(120, 220, 140, 0.7); background: rgba(120, 220, 140, 0.15); box-shadow: 0 0 8px rgba(120, 220, 140, 0.3); }
+.builder-chip.dragging { opacity: 0.4; }
+.builder-chip.drag-over { border-color: var(--accent); box-shadow: -2px 0 0 var(--accent); }
+.builder-chip[draggable] { cursor: grab; }
+.builder-chip[draggable]:active { cursor: grabbing; }
 
 .chip-name {
   font-size: 13px;
@@ -2705,6 +2710,14 @@ body {
   transform: scale(1.04);
 }
 .builder-suggest-btn:active { transform: scale(0.97); }
+.builder-suggest-btn.recolor {
+  border-color: rgba(240, 180, 80, 0.3);
+  background: rgba(240, 180, 80, 0.08);
+}
+.builder-suggest-btn.recolor:hover {
+  border-color: rgba(240, 180, 80, 0.7);
+  background: rgba(240, 180, 80, 0.18);
+}
 
 .suggest-name {
   font-size: 13px;
