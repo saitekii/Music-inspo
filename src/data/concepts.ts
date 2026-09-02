@@ -681,7 +681,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "Holding one or more notes in common between chords while moving the remaining voices. The anchored tones create a smooth connection even between unrelated chords. Distinct from chromatic voice leading where all voices move by half step.",
-    tags: ["voice leading", "common tone", "smooth", "anchor"],
+    tags: ["voice-leading", "common tone", "smooth", "anchor"],
     audio: {
       tempo: 80,
       events: [
@@ -1079,10 +1079,10 @@ const _concepts: Concept[] = [
   {
     id: "contrary-motion",
     name: "Contrary Motion",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Two voices moving in opposite directions. Creates independence between parts and a sense of expanding or contracting harmonic space.",
-    tags: ["voice leading", "counterpoint", "independence"],
+    tags: ["voice-leading", "counterpoint", "independence"],
     audio: {
       tempo: 80,
       events: [
@@ -1097,10 +1097,10 @@ const _concepts: Concept[] = [
   {
     id: "voice-exchange",
     name: "Voice Exchange",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Two voices swap notes. The bass takes the soprano's note and vice versa. Maintains the same harmony while creating melodic motion in both parts.",
-    tags: ["voice leading", "counterpoint", "swap"],
+    tags: ["voice-leading", "counterpoint", "swap"],
     audio: {
       tempo: 80,
       events: [
@@ -1112,10 +1112,10 @@ const _concepts: Concept[] = [
   {
     id: "chromatic-voice-leading",
     name: "Chromatic Voice Leading",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Moving between chords by half-step motion in one or more voices. Minimizes movement and creates smooth connections even between distantly related chords.",
-    tags: ["voice leading", "chromatic", "smooth", "half-step"],
+    tags: ["voice-leading", "chromatic", "smooth", "half-step"],
     audio: {
       tempo: 80,
       events: [
@@ -1528,7 +1528,7 @@ const _concepts: Concept[] = [
     category: "melodic-devices",
     description:
       "A note from the previous chord is held (suspended) into the new chord, creating a dissonance that resolves downward by step. Named by the intervals formed: 4-3 suspension, 7-6, 9-8. The preparation-suspension-resolution cycle is one of music's most satisfying gestures.",
-    tags: ["suspension", "dissonance", "resolution", "voice leading"],
+    tags: ["suspension", "dissonance", "resolution", "voice-leading"],
     audio: {
       tempo: 72,
       events: [
@@ -1563,10 +1563,10 @@ const _concepts: Concept[] = [
   {
     id: "inner-voice-chromaticism",
     name: "Inner-Voice Chromaticism",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Chromatic motion in the inner voices (alto/tenor) while the outer voices hold or move diatonically. The chromatic movement is half-hidden, creating a subtle shimmer. The golden age arrangers' go-to for adding warmth and sophistication without disturbing the melody or bass.",
-    tags: ["voice leading", "chromatic", "inner voice", "golden age", "arranging"],
+    tags: ["voice-leading", "chromatic", "inner voice", "golden age", "arranging"],
     audio: {
       tempo: 80,
       events: [
@@ -1580,10 +1580,10 @@ const _concepts: Concept[] = [
   {
     id: "descending-inner-voice",
     name: "Descending Inner Voice",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A stepwise descending line in an inner voice connecting chords while bass and melody stay relatively still. The descending line can be diatonic or chromatic. Creates a sense of gravity and longing. Think of every romantic film score cue ever written.",
-    tags: ["voice leading", "inner voice", "descending", "chromatic", "film"],
+    tags: ["voice-leading", "inner voice", "descending", "chromatic", "film"],
     audio: {
       tempo: 72,
       events: [
@@ -1597,7 +1597,7 @@ const _concepts: Concept[] = [
   {
     id: "rootless-voicings",
     name: "Rootless Voicings",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Seventh chord voicings that omit the root, relying on the bass player or context to supply it. Built from the 3rd, 5th, 7th, and 9th (or other extensions). Sounds more sophisticated and less \"blocky\" than root-position chords. Essential for jazz piano comping.",
     tags: ["voicing", "rootless", "jazz", "piano", "comping"],
@@ -1613,7 +1613,7 @@ const _concepts: Concept[] = [
   {
     id: "drop-voicings",
     name: "Drop-2 & Drop-3 Voicings",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Taking a close-position chord and dropping the 2nd (or 3rd) voice from the top down an octave. Creates wider, more open voicings that sit better on guitar and in arrangements. Drop-2 is the most common jazz guitar voicing; drop-3 adds even more spread.",
     tags: ["voicing", "drop-2", "drop-3", "guitar", "arranging"],
@@ -1996,7 +1996,7 @@ const _concepts: Concept[] = [
   {
     id: "shell-voicings",
     name: "Shell Voicings (Guide Tones)",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "The absolute minimum voicing: just root, 3rd, and 7th (no 5th). These two intervals (3rd and 7th) define the chord quality and create the strongest voice leading between chords — the 3rd of one chord becomes the 7th of the next. The skeleton of jazz comping.",
     tags: ["voicing", "shell", "guide tones", "minimal", "jazz"],
@@ -2014,7 +2014,7 @@ const _concepts: Concept[] = [
   {
     id: "upper-structure-voicings",
     name: "Upper-Structure Voicings",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Voicings where the left hand plays the shell (3rd and 7th) while the right hand plays a triad that creates the extensions. For G7alt: left hand plays B and F, right hand plays Eb triad (Eb, G, Bb = #5, #9, #11). Complex chords from simple shapes.",
     tags: ["voicing", "upper structure", "two-hand", "extensions", "jazz"],
@@ -2030,7 +2030,7 @@ const _concepts: Concept[] = [
   {
     id: "cluster-voicings",
     name: "Cluster Voicings",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Chords with notes bunched together in seconds rather than spread in thirds. Three or more adjacent scale tones sounding simultaneously. Creates a dense, buzzing, modern texture. McCoy Tyner's left hand, Debussy's tone clusters, and every sci-fi underscore.",
     tags: ["voicing", "cluster", "dense", "modern", "seconds"],
@@ -2047,7 +2047,7 @@ const _concepts: Concept[] = [
   {
     id: "so-what-voicing",
     name: "So What Voicing",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Three perfect fourths stacked with a major third on top (D-G-C-F-A for Dm11). Named after Miles Davis's \"So What\" where Bill Evans plays it. A quartal voicing with one deviation. Dark, open, modern. The sound of modal jazz crystallized in one chord shape.",
     tags: ["voicing", "so what", "quartal", "modal", "bill evans"],
@@ -2530,10 +2530,10 @@ const _concepts: Concept[] = [
   {
     id: "suspension-chain",
     name: "Suspension Chain",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A series of suspensions where the resolution of one suspension becomes the preparation for the next. Creates cascading waves of tension and release — an unbroken chain of yearning. The sound of Romantic longing distilled into voice leading. Mahler, Barber, and every aching film score cadence.",
-    tags: ["voice leading", "suspension", "chain", "romantic", "longing"],
+    tags: ["voice-leading", "suspension", "chain", "romantic", "longing"],
     audio: {
       tempo: 60,
       events: [
@@ -3062,7 +3062,7 @@ const _concepts: Concept[] = [
     category: "gospel",
     description:
       "Chromatic chords inserted between diatonic chords to create smooth voice leading and constant harmonic motion. Diminished 7ths, chromatic dominants, and augmented chords fill every gap. A simple I-IV-V becomes a 12-chord journey. Gospel musicians think in passing chords the way jazz musicians think in substitutions.",
-    tags: ["gospel", "passing chords", "chromatic", "voice leading", "church"],
+    tags: ["gospel", "passing chords", "chromatic", "voice-leading", "church"],
     audio: {
       tempo: 80,
       events: [
@@ -3916,10 +3916,10 @@ const _concepts: Concept[] = [
   {
     id: "guide-tone-voice-leading",
     name: "Guide-Tone Voice Leading",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "The movement of 3rds and 7ths through chord changes — the two notes that define chord quality and function. In a ii-V-I, the guide tones move by half step: Dm7 (F, C) → G7 (F→F, C→B) → Cmaj7 (E, B). Master this and you hear the skeleton of every jazz progression. The foundation of comp voicings, walking bass, and improvised lines.",
-    tags: ["voice leading", "guide tones", "3rds", "7ths", "jazz"],
+    tags: ["voice-leading", "guide tones", "3rds", "7ths", "jazz"],
     audio: {
       tempo: 90,
       events: [
@@ -3934,7 +3934,7 @@ const _concepts: Concept[] = [
   {
     id: "species-counterpoint",
     name: "Species Counterpoint",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "The systematic study of two-voice writing in five graduated species: note-against-note, two-against-one, four-against-one, syncopated, and free (florid). Each species adds rhythmic complexity while maintaining consonance rules. The gym workout that builds voice-leading intuition. Fux wrote the textbook in 1725; it still works.",
     tags: ["counterpoint", "species", "two-voice", "fux", "classical"],
@@ -3953,7 +3953,7 @@ const _concepts: Concept[] = [
   {
     id: "contrapuntal-imitation",
     name: "Contrapuntal Imitation",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "One voice states a melody, then another voice enters with the same or similar melody at a different pitch or time. The foundation of canons, fugues, and inventions. Also shows up constantly in film scoring — a theme in the strings answered by the woodwinds is imitation.",
     tags: ["counterpoint", "imitation", "fugue", "canon", "orchestral"],
@@ -3973,7 +3973,7 @@ const _concepts: Concept[] = [
   {
     id: "canon",
     name: "Canon",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Strict imitation — a melody in one voice is exactly replicated in another voice after a delay. The second voice follows the first like a shadow, creating harmony through time displacement. Pachelbel's Canon is famous but reductive; Bach's canons in the Art of Fugue are the real masterclass.",
     tags: ["counterpoint", "canon", "imitation", "strict", "classical"],
@@ -3993,7 +3993,7 @@ const _concepts: Concept[] = [
   {
     id: "invertible-counterpoint",
     name: "Invertible Counterpoint",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Two melodies designed so either one can be on top or bottom — swap their octaves and the result is still good counterpoint. Requires careful interval planning (no parallel 5ths in either configuration). Bach's inventions are built on this. A compositional superpower for development sections.",
     tags: ["counterpoint", "invertible", "double", "bach", "invention"],
@@ -4014,7 +4014,7 @@ const _concepts: Concept[] = [
   {
     id: "contrary-counterpoint",
     name: "Contrary Counterpoint",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Two voices moving in opposite directions — when one goes up, the other goes down. The most fundamental type of good counterpoint and the strongest way to create independence between voices. Contrary motion automatically avoids parallel 5ths and octaves.",
     tags: ["counterpoint", "contrary", "opposite motion", "independence"],
@@ -4033,7 +4033,7 @@ const _concepts: Concept[] = [
   {
     id: "oblique-counterpoint",
     name: "Oblique Counterpoint",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "One voice holds a note (or repeats it) while the other moves. The held voice becomes a pedal or anchor while the moving voice creates changing intervals. A cornerstone of tonal music — pedal points, drones, and ostinato bass lines are all oblique motion in action.",
     tags: ["counterpoint", "oblique", "pedal", "drone", "anchor"],
@@ -4052,7 +4052,7 @@ const _concepts: Concept[] = [
   {
     id: "contrapuntal-ostinato",
     name: "Contrapuntal Ostinato",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A repeating pattern in one voice with a free melody above or below it. The ostinato provides structure while the free voice provides expression. Purcell's ground basses, Bach's Passacaglia in C minor, and any funk bass riff with a vocal melody on top are all contrapuntal ostinato.",
     tags: ["counterpoint", "ostinato", "ground bass", "passacaglia", "repeating"],
@@ -4073,7 +4073,7 @@ const _concepts: Concept[] = [
   {
     id: "fugato",
     name: "Fugato",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A passage written in fugal style — staggered entries of a subject in different voices — without committing to a full fugue. Common in orchestral development sections, film scores, and even prog rock. A way to build intensity and complexity by layering the same idea across registers.",
     tags: ["counterpoint", "fugato", "fugue", "staggered entry", "development"],
@@ -4094,7 +4094,7 @@ const _concepts: Concept[] = [
   {
     id: "linear-counterpoint",
     name: "Linear Counterpoint",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Counterpoint where the horizontal melodic lines take priority over vertical consonance. The harmony is a result, not a goal — lines may clash momentarily because each voice follows its own melodic logic. Hindemith, Bartók, and Stravinsky write this way. Also relevant to jazz horn arranging where each part has a strong individual line.",
     tags: ["counterpoint", "linear", "horizontal", "modern", "dissonance"],
@@ -4113,7 +4113,7 @@ const _concepts: Concept[] = [
   {
     id: "countermelody",
     name: "Countermelody",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A secondary melody played simultaneously with the main theme. It must be interesting enough to stand alone but subordinate enough not to compete. The best countermelodies complement the main melody rhythmically (moving when it rests) and intervallically (filling its gaps). John Williams, Earth Wind & Fire horn lines, and gospel organ — all masters of this.",
     tags: ["counterpoint", "countermelody", "orchestration"],
@@ -5468,7 +5468,7 @@ const _concepts: Concept[] = [
     category: "modulation",
     description:
       "A single sustained note shared between the old and new key — the harmony changes around it while one voice holds still. Unlike pivot chord modulation (where an entire chord has dual function), here just one pitch bridges the gap. That sustained note is the listener's lifeline: everything else transforms, but that one thread of continuity makes the shift feel organic rather than arbitrary.",
-    tags: ["modulation", "pivot", "common tone", "voice leading", "smooth"],
+    tags: ["modulation", "pivot", "common tone", "voice-leading", "smooth"],
     audio: {
       tempo: 75,
       events: [
@@ -5991,7 +5991,7 @@ const _concepts: Concept[] = [
   {
     id: "fauxbourdon",
     name: "Fauxbourdon",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Parallel first-inversion triads moving in stepwise motion — all three voices move in the same direction by the same interval. Technically 'illegal' in strict counterpoint (parallel motion everywhere) but the resulting sound is lush and hymn-like. Medieval in origin, but the same texture appears in Debussy, Ravel, and golden age Hollywood. The bridge between parallel harmony and counterpoint.",
     tags: ["counterpoint", "fauxbourdon", "parallel", "first inversion", "medieval"],
@@ -6010,7 +6010,7 @@ const _concepts: Concept[] = [
   {
     id: "free-counterpoint",
     name: "Free Counterpoint",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Counterpoint freed from strict species rules — voices move independently with rhythmic variety, occasional dissonance, and flexible treatment of consonance. The real-world application of counterpoint training. Bach's fugues are 'free' counterpoint (they follow principles, not rigid species rules). Any well-crafted multi-voice texture in any style uses free counterpoint.",
     tags: ["counterpoint", "free", "flexible", "bach", "practical"],
@@ -6031,7 +6031,7 @@ const _concepts: Concept[] = [
   {
     id: "contrapuntal-dissonance",
     name: "Contrapuntal Dissonance",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Dissonance created by the movement of independent voices — passing tones, suspensions, and anticipations that clash momentarily before resolving. In counterpoint, dissonance isn't a mistake; it's a tool with strict rules about how it's approached and resolved. Controlled contrapuntal dissonance is what makes polyphonic music expressive. Without it, counterpoint is just parallel motion.",
     tags: ["counterpoint", "dissonance", "resolution", "suspension", "tension"],
@@ -6049,7 +6049,7 @@ const _concepts: Concept[] = [
   {
     id: "counterpoint-with-chromaticism",
     name: "Counterpoint with Chromaticism",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Using chromatic tones within contrapuntal writing — chromatic passing tones, chromatic neighbor tones, and cross-relations between voices. Adds expressive intensity and harmonic richness. Bach's late works (The Art of Fugue, Musical Offering) push chromatic counterpoint to its limit. Also the foundation of Wagner's and Mahler's orchestral writing, where chromatic lines create constantly shifting harmony.",
     tags: ["counterpoint", "chromatic", "bach", "wagner", "expressive"],
@@ -6091,7 +6091,7 @@ const _concepts: Concept[] = [
     category: "orchestration",
     description:
       "Moving a melody between instruments as a compositional technique — the melody passes from flute to oboe to clarinet, each handoff creating a color change while the line continues. The voice leading isn't between pitches but between timbres. Ravel's Boléro is the textbook example. Webern, Schoenberg (Klangfarbenmelodie), and film composers use this constantly.",
-    tags: ["timbre", "voice leading", "harmonic color", "ravel"],
+    tags: ["timbre", "voice-leading", "harmonic color", "ravel"],
     audio: {
       tempo: 80,
       events: [
@@ -6128,7 +6128,7 @@ const _concepts: Concept[] = [
     category: "orchestration",
     description:
       "Voice leading within a divisi string section — each desk's part moves smoothly to its next note, creating the effect of a single section breathing through chord changes. The individual voice-leading lines are invisible to the listener; they hear a shimmering chord that transforms. Mahler, Strauss, and John Williams create their most emotional moments this way.",
-    tags: ["divisi", "voice leading", "strings", "mahler"],
+    tags: ["divisi", "voice-leading", "strings", "mahler"],
     audio: {
       tempo: 60,
       events: [
@@ -6330,10 +6330,10 @@ const _concepts: Concept[] = [
   {
     id: "chromatic-inner-voice-motion",
     name: "Chromatic Inner-Voice Motion",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A chromatic line moving through the inner voices of a chord progression — not the melody, not the bass, but the alto or tenor register. The outer voices hold still or move diatonically while the inner voice slides chromatically, generating constantly shifting chord qualities. The secret sauce behind golden age Hollywood lushness and late Romantic orchestral writing. Mahler and Korngold build entire emotional arcs from a single chromatic inner voice.",
-    tags: ["voice leading", "chromatic", "inner voice", "hollywood", "mahler"],
+    tags: ["voice-leading", "chromatic", "inner voice", "hollywood", "mahler"],
     audio: {
       tempo: 72,
       events: [
@@ -7133,7 +7133,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "Moving through keys so smoothly and continuously that no single key feels like 'home' — the harmony drifts like a boat on a current. Each chord connects logically to the next via voice leading, but the cumulative effect is constant motion without a clear destination. Mahler's slow movements do this: you can follow every step, but when you look up, you're somewhere you've never been. It creates a sense of existential wandering — beautiful and unsettling.",
-    tags: ["drift", "wandering", "mahler", "voice leading"],
+    tags: ["drift", "wandering", "mahler", "voice-leading"],
     audio: {
       tempo: 60,
       events: [
@@ -7169,10 +7169,10 @@ const _concepts: Concept[] = [
   {
     id: "voice-leading-intensification",
     name: "Voice-Leading Intensification",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Gradually tightening the chromatic voice leading over a passage — starting with diatonic steps and progressively introducing more half-step motion until every voice is moving by semitone. The increasing chromaticism creates a ratcheting tension. Mahler and Wagner use this to build toward climaxes: the voice leading itself becomes the drama, the individual lines pulling the listener toward the breaking point.",
-    tags: ["voice leading", "chromatic", "intensification", "tension", "mahler"],
+    tags: ["voice-leading", "chromatic", "intensification", "tension", "mahler"],
     audio: {
       tempo: 66,
       events: [
@@ -7225,10 +7225,10 @@ const _concepts: Concept[] = [
   {
     id: "bass-pedal-chromatic-upper",
     name: "Bass Pedal with Chromatic Upper Voices",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A sustained bass note while the upper voices move chromatically — combining the stability of a pedal with the restlessness of chromatic voice leading. The bass provides an anchor; the chromatic upper voices create shifting harmonic colors above it. The effect is like watching clouds change shape over a fixed landscape. Mahler uses this in adagio movements to create a sense of time suspended but not frozen.",
-    tags: ["voice leading", "pedal", "chromatic", "mahler", "suspended"],
+    tags: ["voice-leading", "pedal", "chromatic", "mahler", "suspended"],
     audio: {
       tempo: 60,
       events: [
@@ -7243,10 +7243,10 @@ const _concepts: Concept[] = [
   {
     id: "sustained-inner-voices",
     name: "Sustained Inner Voices",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Holding one or more inner voices constant while outer voices move — the opposite of a pedal point, which sustains the bass. Sustained inner voices create a luminous, glowing quality: the harmony changes around them, but the held notes provide continuity and warmth. Mahler's string writing is full of this — violas or second violins sustaining while everything else moves, creating a sense of inner stillness within outer motion.",
-    tags: ["voice leading", "inner", "sustained", "glow", "mahler"],
+    tags: ["voice-leading", "inner", "sustained", "glow", "mahler"],
     audio: {
       tempo: 60,
       events: [
@@ -7260,10 +7260,10 @@ const _concepts: Concept[] = [
   {
     id: "long-range-voice-exchange",
     name: "Long-Range Voice Exchange",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Two voices exchanging notes over a span of many bars rather than the typical one or two. Voice A starts on C and slowly moves to E; voice B starts on E and slowly moves to C. The exchange might take 16 or 32 bars, creating a large-scale symmetry that the listener may feel rather than consciously hear. Mahler and Bruckner use this to create structural coherence across massive spans of music.",
-    tags: ["voice leading", "exchange", "long-range", "structure", "bruckner"],
+    tags: ["voice-leading", "exchange", "long-range", "structure", "bruckner"],
     audio: {
       tempo: 66,
       events: [
@@ -9295,10 +9295,10 @@ const _concepts: Concept[] = [
   {
     id: "moving-inner-voices-sustained",
     name: "Sustained Chord with Moving Inner Voices",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "The outer voices hold their notes while inner voices move chromatically or stepwise — the chord shape stays the same but the harmonic color shifts within. Creates a kaleidoscopic effect: the listener hears the same 'frame' but the picture inside keeps changing. Different from a line cliché (which is one specific voice moving): here, multiple inner voices shift simultaneously. Ravel and Debussy use this for their most atmospheric passages.",
-    tags: ["voice leading", "inner", "chromatic", "shifting", "atmospheric"],
+    tags: ["voice-leading", "inner", "chromatic", "shifting", "atmospheric"],
     audio: {
       tempo: 60,
       events: [
@@ -9331,10 +9331,10 @@ const _concepts: Concept[] = [
   {
     id: "chromatic-vl-spiral",
     name: "Chromatic Voice-Leading Spiral",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Chromatic voice leading that circles rather than resolves — each chromatic step leads to another that leads to another, spiraling through tonal space without landing. The motion is perpetual and disorienting, like walking a spiral staircase and never reaching a floor. Late Mahler and Schoenberg's tonal works push chromatic voice leading to this extreme. The spiral is the sound of tonality stretched to its breaking point.",
-    tags: ["voice leading", "chromatic", "spiral", "perpetual", "mahler"],
+    tags: ["voice-leading", "chromatic", "spiral", "perpetual", "mahler"],
     audio: {
       tempo: 60,
       events: [
@@ -9508,10 +9508,10 @@ const _concepts: Concept[] = [
   {
     id: "pedal-harmonic-escalation",
     name: "Pedal with Harmonic Escalation",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A sustained pedal note with progressively more dissonant or distant harmonies above it — the pedal provides stability while the upper voices become increasingly wild. The tension between the immovable bass and the escalating harmony creates a ratcheting intensity. Bruckner and Mahler build enormous dominant preparations this way: the pedal G holds firm while everything above becomes more chromatic, more dissonant, more urgent.",
-    tags: ["voice leading", "pedal", "escalation", "tension", "bruckner"],
+    tags: ["voice-leading", "pedal", "escalation", "tension", "bruckner"],
     audio: {
       tempo: 66,
       events: [
@@ -10070,7 +10070,7 @@ const _concepts: Concept[] = [
   {
     id: "canon-at-unison",
     name: "Canon at the Unison",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Two voices playing the exact same melody, one entering after the other — a round at the same pitch level. The simplest and most transparent form of imitative counterpoint. The overlapping entries create harmony from a single melodic line. 'Row, Row, Row Your Boat' is a canon at the unison. In art music, unison canons reveal the hidden harmonic potential of a melody — you hear it as both melody and harmony simultaneously.",
     tags: ["counterpoint", "canon", "unison", "imitation", "round"],
@@ -10089,7 +10089,7 @@ const _concepts: Concept[] = [
   {
     id: "stretto",
     name: "Stretto",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Overlapping imitative entries at increasingly close intervals — voices pile in before the previous entry has finished its theme. The temporal compression creates a sense of urgency and textural density. In a fugue, stretto is the climactic technique: the subject entries crowd together, creating maximum contrapuntal complexity. Bach's fugues reach their peak intensity in stretto passages. The listener hears the theme everywhere at once.",
     tags: ["counterpoint", "stretto", "compression", "climax", "fugue"],
@@ -10107,7 +10107,7 @@ const _concepts: Concept[] = [
   {
     id: "contrapuntal-climax",
     name: "Contrapuntal Climax",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "The moment in a polyphonic texture where all contrapuntal techniques converge — stretto, augmentation, inversion, and multiple subjects sounding simultaneously. The maximum density of independent voices creates an overwhelming, complex peak. Bach's Musical Offering and Art of Fugue reach contrapuntal climaxes of staggering complexity. In film scoring, a contrapuntal climax with multiple themes superimposed creates a sense of all narrative threads converging.",
     tags: ["counterpoint", "climax", "convergence", "density", "bach"],
@@ -10125,7 +10125,7 @@ const _concepts: Concept[] = [
   {
     id: "imitative-countermelody",
     name: "Imitative Countermelody",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A countermelody that borrows motifs or rhythmic cells from the main melody — echoing, answering, or commenting on the theme using its own material. More connected than a free countermelody; the imitation creates a dialogue between the theme and its companion. Film composers use this to create 'deep' textures where the countermelody sounds organically related to the theme rather than arbitrarily layered on top.",
     tags: ["counterpoint", "countermelody", "imitative", "dialogue", "organic"],
@@ -10144,7 +10144,7 @@ const _concepts: Concept[] = [
   {
     id: "chromatic-countermelody",
     name: "Chromatic Countermelody",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A countermelody moving primarily by half steps against a diatonic main melody — the chromatic voice creates harmonic friction and color while the diatonic melody provides stability. The chromatic line seems to 'slide' against the fixed points of the melody, creating constantly shifting intervals. A favorite technique of late Romantic composers and film scorers for adding emotional complexity to a simple tune.",
     tags: ["counterpoint", "chromatic", "countermelody", "friction", "romantic"],
@@ -10338,10 +10338,10 @@ const _concepts: Concept[] = [
   {
     id: "descending-5-6-sequence",
     name: "Descending 5–6 Sequence",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A contrapuntal sequence where a root-position triad alternates with a first-inversion triad a step below — the bass descends stepwise while the upper voice alternates between a fifth and a sixth above. Creates a graceful, cascading descent. One of the most common sequences in Baroque and Classical music, and a staple of golden-age Hollywood scoring for passages of flowing, inevitable descent.",
-    tags: ["voice leading", "sequence", "descending", "5-6", "baroque"],
+    tags: ["voice-leading", "sequence", "descending", "5-6", "baroque"],
     audio: {
       tempo: 72,
       events: [
@@ -10358,10 +10358,10 @@ const _concepts: Concept[] = [
   {
     id: "ascending-5-6-sequence",
     name: "Ascending 5–6 Sequence",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "The ascending counterpart of the descending 5–6 — the bass rises stepwise while upper voices alternate fifth and sixth intervals. Creates upward momentum with smooth voice leading. Less common than the descending version but equally elegant. Used for passages of rising hope, building intensity, or climbing toward a climax. The stepwise bass provides stability while the alternating intervals create harmonic color.",
-    tags: ["voice leading", "sequence", "ascending", "5-6", "momentum"],
+    tags: ["voice-leading", "sequence", "ascending", "5-6", "momentum"],
     audio: {
       tempo: 72,
       events: [
@@ -10937,10 +10937,10 @@ const _concepts: Concept[] = [
   {
     id: "pedal-upper-voice-suspension",
     name: "Pedal with Upper-Voice Suspension",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A bass pedal combined with suspended notes in the upper voices — both the bottom and top of the texture are static while inner voices move. The pedal anchors from below; the suspension floats from above; the middle provides all the motion. Creates a sense of a held breath: the extremes are frozen while the interior shifts. The Adagietto sound in miniature. The moment when both pedal and suspension resolve simultaneously is one of the most profound releases in music.",
-    tags: ["voice leading", "pedal", "suspension", "static", "held breath"],
+    tags: ["voice-leading", "pedal", "suspension", "static", "held breath"],
     audio: {
       tempo: 54,
       events: [
@@ -11155,10 +11155,10 @@ const _concepts: Concept[] = [
   {
     id: "high-register-sus-low-pedal",
     name: "High-Register Suspension over Low Pedal",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A suspended note in the highest register of the string section over a bass pedal several octaves below — maximum registral separation combined with maximum melodic tension. The high suspension floats like a single star; the low pedal is the ground. Between them, the harmonic voices provide shifting color. The extreme distance between the two creates a sense of infinite space. Mahler's most transcendent moments live in this registral gap.",
-    tags: ["voice leading", "high register", "suspension", "pedal", "transcendent"],
+    tags: ["voice-leading", "high register", "suspension", "pedal", "transcendent"],
     audio: {
       tempo: 54,
       events: [
@@ -12501,10 +12501,10 @@ const _concepts: Concept[] = [
   {
     id: "chromatic-voice-exchange",
     name: "Chromatic Mediated Voice Exchange",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Two structural voices exchanging pitches through chromatic movement — the soprano descends chromatically while the bass ascends chromatically, each arriving at the other's starting pitch (or a related structural note). A common harmonic thread is retained throughout the exchange. The crossing voices create a kaleidoscopic effect: the harmony shifts constantly but the overall framework remains stable. Wagner and Strauss use this for passages of maximum chromatic motion with structural coherence.",
-    tags: ["voice leading", "chromatic", "exchange", "crossing", "wagner"],
+    tags: ["voice-leading", "chromatic", "exchange", "crossing", "wagner"],
     audio: {
       tempo: 66,
       events: [
@@ -12538,10 +12538,10 @@ const _concepts: Concept[] = [
   {
     id: "double-chromatic-bass-descent",
     name: "Double Chromatic Bass Descent",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Two voices descending chromatically simultaneously — typically bass and an inner voice, creating parallel chromatic motion in thirds, sixths, or tenths. The double descent is more intense than a single chromatic bass line: two voices pulling downward doubles the sense of gravity and inevitability. The harmonic implications are richer because two moving voices generate a more complex series of chords. Used in Romantic and film music for passages of inexorable descent.",
-    tags: ["voice leading", "chromatic", "double", "descending", "parallel"],
+    tags: ["voice-leading", "chromatic", "double", "descending", "parallel"],
     audio: {
       tempo: 66,
       events: [
@@ -12556,10 +12556,10 @@ const _concepts: Concept[] = [
   {
     id: "chromatic-bass-static-inner",
     name: "Chromatic Bass with Static Inner Voices",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "The bass moving chromatically while inner voices hold their pitches — the bass slides underneath a fixed harmonic framework. Each bass note creates a different inversion or reharmonization of the sustained inner voices. Particularly effective for cinematic suspense: the held chord is the surface calm, and the sliding bass is the danger underneath. The bass's chromatic motion creates a sense of inevitability while the static voices provide an eerie stillness.",
-    tags: ["voice leading", "chromatic bass", "static", "suspense", "cinematic"],
+    tags: ["voice-leading", "chromatic bass", "static", "suspense", "cinematic"],
     audio: {
       tempo: 60,
       events: [
@@ -12574,10 +12574,10 @@ const _concepts: Concept[] = [
   {
     id: "chromatic-inner-ascent",
     name: "Chromatic Inner-Voice Ascension",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "An inner voice climbing chromatically while the outer voices remain stable — the inverse of the more common inner-voice descent. The ascending inner voice creates mounting tension within a stable harmonic frame. As the inner voice rises, it passes through increasingly dissonant relationships with the held outer voices. The ascent feels like pressure building inside a container. Used in Romantic music and film scoring for passages of growing unease or approaching climax.",
-    tags: ["voice leading", "chromatic", "inner voice", "ascending", "tension"],
+    tags: ["voice-leading", "chromatic", "inner voice", "ascending", "tension"],
     audio: {
       tempo: 66,
       events: [
@@ -12591,10 +12591,10 @@ const _concepts: Concept[] = [
   {
     id: "semitone-pivot",
     name: "Semitone Voice-Leading Pivot",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "A single semitone movement in one voice that reinterprets the surrounding harmony — changing one note by half step transforms the chord's function, color, or tonal center. E to Eb turns C major into C minor; B to Bb turns G major into G7; F to F# turns F major into an augmented sixth. The smallest possible voice motion creates the largest possible harmonic reinterpretation. The semitone pivot is the most efficient modulatory tool in tonal music.",
-    tags: ["voice leading", "semitone", "pivot", "reinterpretation", "efficient"],
+    tags: ["voice-leading", "semitone", "pivot", "reinterpretation", "efficient"],
     audio: {
       tempo: 66,
       events: [
@@ -12608,10 +12608,10 @@ const _concepts: Concept[] = [
   {
     id: "voice-leading-paradox",
     name: "Voice-Leading Paradox",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Surface harmony that changes dramatically while individual voices move minimally — each voice moves by half step or stays put, but the combined result is a chord that sounds completely different. The paradox is between the smoothness of the voice leading and the remoteness of the harmonic change. A C major chord can become an Eb minor chord with three voices each moving by one half step. The listener hears a dramatic shift but can't identify what 'moved.' Wagner's entire harmonic language is built on this paradox.",
-    tags: ["voice leading", "paradox", "smooth", "remote", "wagner"],
+    tags: ["voice-leading", "paradox", "smooth", "remote", "wagner"],
     audio: {
       tempo: 60,
       events: [
@@ -13018,7 +13018,7 @@ const _concepts: Concept[] = [
     category: "texture",
     description:
       "The 9th of a major chord resolving stepwise down to the root while the major 7th sustains — a tiny voice-leading move that creates a gentle sigh within a single chord. The chord doesn't change; it settles. Common in ambient and lo-fi contexts where the harmonic rhythm is so slow that motion within a chord replaces motion between chords.",
-    tags: ["texture", "voice leading", "resolution", "ambient", "subtle"],
+    tags: ["texture", "voice-leading", "resolution", "ambient", "subtle"],
     audio: {
       tempo: 60,
       events: [
@@ -15191,10 +15191,10 @@ const _concepts: Concept[] = [
   {
     id: "semitone-voice-leading",
     name: "Semitone Voice Leading",
-    category: "voice leading",
+    category: "voice-leading",
     description:
       "Multiple voices moving by semitone simultaneously, creating smooth chromatic motion between chords. Unlike single chromatic passing tones, this involves parallel or contrary semitone movement across the voicing. Gives progressions a liquid, inevitable quality.",
-    tags: ["voice leading", "chromatic", "jazz", "classical", "film"],
+    tags: ["voice-leading", "chromatic", "jazz", "classical", "film"],
     audio: {
       tempo: 66,
       events: [
@@ -15707,7 +15707,7 @@ const _concepts: Concept[] = [
     category: "microtonality",
     description:
       "Voice leading with intervals smaller than a semitone — movements of quarter tones, sixth tones, or arbitrary microtonal steps between chord tones. Smaller intervals mean smoother motion: a voice moving by 50 cents is half as dramatic as a semitone shift. In dense microtonal harmony, voices can glide between chords with almost imperceptible motion, creating a liquid, morphing quality that's impossible in 12-TET. The harmonic rhythm feels continuous rather than stepped.",
-    tags: ["microtonal", "voice leading", "smooth", "continuous", "xenharmonic"],
+    tags: ["microtonal", "voice-leading", "smooth", "continuous", "xenharmonic"],
     audio: {
       tempo: 65,
       events: [
@@ -15742,7 +15742,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "A second-inversion triad that connects two root-position or first-inversion chords via stepwise bass motion. The 6/4 chord doesn't function as its own harmony — it's a byproduct of the bass passing between two stable chords. I → V6/4 → I6 with bass C→D→E. One of the most fundamental voice-leading patterns in tonal music, drilled in every theory class but invisible to most pop musicians.",
-    tags: ["inversion", "voice leading", "passing chords", "classical"],
+    tags: ["inversion", "voice-leading", "passing chords", "classical"],
     audio: {
       tempo: 80,
       events: [
@@ -15843,7 +15843,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "An augmented 6th chord (Italian, French, or German) used in passing rather than as a pre-dominant. The augmented 6th interval expands outward by half step in contrary motion, connecting two chords with maximum voice-leading efficiency. When used as a passing chord it's less dramatic than the textbook pre-dominant version — more of a sophisticated color than a structural event.",
-    tags: ["augmented sixth", "chromatic", "passing chords", "classical", "voice leading"],
+    tags: ["augmented sixth", "chromatic", "passing chords", "classical", "voice-leading"],
     audio: {
       tempo: 80,
       events: [
@@ -16264,7 +16264,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "A chord played over a different bass note — written as Chord/Bass. C/E means a C major triad with E in the bass. Slash chords create smooth bass lines, imply richer harmony, and let you redefine a chord's function by changing its lowest note. The single most powerful tool for making basic progressions sound professional.",
-    tags: ["slash chord", "inversion", "bass", "voice leading", "fundamental"],
+    tags: ["slash chord", "inversion", "bass", "voice-leading", "fundamental"],
     audio: {
       tempo: 72,
       events: [
@@ -16315,7 +16315,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "Diatonic chords on top with a bass line that moves chromatically underneath, creating slash chords at every step. The upper harmony says 'everything is normal' while the bass says 'something is shifting.' The tension between the two is what makes film scores sound emotional.",
-    tags: ["slash chord", "chromatic", "bass", "film", "voice leading"],
+    tags: ["slash chord", "chromatic", "bass", "film", "voice-leading"],
     audio: {
       tempo: 68,
       events: [
@@ -16366,7 +16366,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "A sequence of chords all in first inversion — the 3rd in the bass. This puts every chord's bass note a third apart from the root, creating a smooth, connected bass line that glides between chords. Medieval fauxbourdon evolved into this. The sound is gentle, hymn-like, and inevitable.",
-    tags: ["slash chord", "inversion", "fauxbourdon", "voice leading", "smooth"],
+    tags: ["slash chord", "inversion", "fauxbourdon", "voice-leading", "smooth"],
     audio: {
       tempo: 72,
       events: [
@@ -16434,7 +16434,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "The melody or upper voices move in one direction while the bass moves in the opposite direction, creating slash chords at every intersection. The widening gap between voices creates a sense of expansion; the narrowing gap creates urgency. The oldest trick in counterpoint, now powered by slash chord notation.",
-    tags: ["slash chord", "contrary motion", "voice leading", "counterpoint", "classical"],
+    tags: ["slash chord", "contrary motion", "voice-leading", "counterpoint", "classical"],
     audio: {
       tempo: 72,
       events: [
@@ -16468,7 +16468,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "The pop four-chord progression with inversions chosen to create a smooth descending bass line: C→B→A→A (or C→B→A→F with F/A). Every chord connects to the next by step or semitone in the bass. This is why some pop songs feel effortless — the chords are simple but the bass voice-leads like Bach.",
-    tags: ["slash chord", "descending", "pop", "voice leading", "smooth"],
+    tags: ["slash chord", "descending", "pop", "voice-leading", "smooth"],
     audio: {
       tempo: 76,
       events: [
@@ -16485,7 +16485,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "Inversions chosen to create a rising bass: E→F→B→C (in C major). The ascending bass builds energy and forward motion even though the chords themselves are completely diatonic. The secret weapon for verses that need to build into a chorus without getting harmonically complex.",
-    tags: ["slash chord", "ascending", "pop", "voice leading", "build"],
+    tags: ["slash chord", "ascending", "pop", "voice-leading", "build"],
     audio: {
       tempo: 76,
       events: [
@@ -16504,7 +16504,7 @@ const _concepts: Concept[] = [
     category: "progressions",
     description:
       "A 28-chord through-composed journey built by chaining concepts together. Opens with a line cliché — the inner voice chromatically descends D#→D→C#→C over an E pedal, creating movement within stillness. Steps through the relative major via secondary dominants (D9→Gmaj7, F#7b9→Bm7). A passing diminished chord (Bb°7) bridges Bm down to Am. The pivot: Bmaj7/D# reveals B as MAJOR for the first time, and Emaj9/G# confirms — we're suddenly in E major. The brightness lingers through F#m11 and A/C#, then another passing diminished (A#°7) pulls us back to minor. Cmaj7 glows as a chromatic neighbor before F#m7b5→B7sus4→B7 locks the minor ii-V. Resolution cycles through slash chords (Em/G, Cmaj7/E) echoing the opening, with B7/D# delivering the final push home to Em9.",
-    tags: ["line cliché", "major-minor ambiguity", "passing chords", "slash chord", "chromatic", "voice leading", "cinematic", "film", "secondary dominant"],
+    tags: ["line cliché", "major-minor ambiguity", "passing chords", "slash chord", "chromatic", "voice-leading", "cinematic", "film", "secondary dominant"],
     audio: {
       tempo: 66,
       events: [
@@ -16552,7 +16552,7 @@ const _concepts: Concept[] = [
     category: "harmonic-devices",
     description:
       "Any chord a half step above or below the target used as an embellishment — the target leaves, visits its chromatic neighbor, and returns. Unlike passing chords (which keep going), neighbor chords come home. I → bII → I is a lower chromatic neighbor (the Neapolitan rocking motion); I → #Imaj7 → ii is an upper chromatic approach that blurs into voice leading. Snarky Puppy, Louis Cole, and Shimomura all use chromatic neighbors to add color without changing the underlying harmonic function — the chord never really left, it just shimmered.",
-    tags: ["chromatic", "neighbor", "embellishing", "harmonic color", "voice leading"],
+    tags: ["chromatic", "neighbor", "embellishing", "harmonic color", "voice-leading"],
     audio: {
       tempo: 76,
       events: [
@@ -16592,7 +16592,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "When two chords share one or more notes, hold those notes in the same voice and move only the voices that need to change. C major (C-E-G) to A minor (A-C-E) shares C and E — only G moves to A. The shared notes create continuity while the moving voice provides harmonic change. The foundation of all smooth voice leading.",
-    tags: ["voice leading", "common tone", "smooth", "fundamental"],
+    tags: ["voice-leading", "common tone", "smooth", "fundamental"],
     audio: {
       tempo: 68,
       events: [
@@ -16609,7 +16609,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Every voice moves by step (half or whole step) or stays put — no leaps. The smoothest possible connection between any two chords. When all four voices move by step, chord changes feel like a continuous flow rather than discrete jumps. This is why jazz voicings sound so liquid compared to block strumming.",
-    tags: ["voice leading", "stepwise", "smooth", "jazz", "fundamental"],
+    tags: ["voice-leading", "stepwise", "smooth", "jazz", "fundamental"],
     audio: {
       tempo: 68,
       events: [
@@ -16626,7 +16626,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Two voices move in opposite directions — one ascending while the other descends. Creates a sense of expansion (voices diverging) or compression (voices converging). The most independent-sounding voice relationship. Bach uses it constantly. In film scoring, converging voices build tension; diverging voices release it.",
-    tags: ["voice leading", "contrary motion", "counterpoint", "independence"],
+    tags: ["voice-leading", "contrary motion", "counterpoint", "independence"],
     audio: {
       tempo: 72,
       events: [
@@ -16643,7 +16643,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Two or more voices move in the same direction by the same interval — parallel thirds, parallel sixths, or parallel triads. Classical theory restricts parallel fifths and octaves, but parallel thirds and sixths sound lush and are used everywhere. Debussy broke the rules with parallel fifths and it sounded incredible.",
-    tags: ["voice leading", "parallel", "thirds", "sixths", "debussy"],
+    tags: ["voice-leading", "parallel", "thirds", "sixths", "debussy"],
     audio: {
       tempo: 72,
       events: [
@@ -16660,7 +16660,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "One voice holds a note while the other voice moves. The stationary voice becomes an anchor — a reference point that makes the moving voice's motion feel deliberate. Pedal tones are oblique motion taken to the extreme. It's how you create harmonic change while maintaining continuity.",
-    tags: ["voice leading", "oblique", "pedal", "anchor", "continuity"],
+    tags: ["voice-leading", "oblique", "pedal", "anchor", "continuity"],
     audio: {
       tempo: 72,
       events: [
@@ -16677,7 +16677,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "A lower voice temporarily moves above a higher voice, or vice versa. The voices swap registers, creating a brief moment of timbral ambiguity. Used sparingly it adds interest; used carelessly it creates mud. Jazz pianists cross voices constantly in their voicings — the alto voice dips below the tenor for one chord, then comes back.",
-    tags: ["voice leading", "crossing", "voicing", "jazz", "texture"],
+    tags: ["voice-leading", "crossing", "voicing", "jazz", "texture"],
     audio: {
       tempo: 68,
       events: [
@@ -16694,7 +16694,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Voices move by half step between chords, even when the chords themselves aren't chromatically related. Cmaj7 (C-E-G-B) to Dbmaj7 (Db-F-Ab-C): every voice shifts up one semitone. The smallest possible motion creates the biggest harmonic surprise. This is how Coltrane changes and chromatic mediants actually work at the voice level.",
-    tags: ["voice leading", "chromatic", "semitone", "coltrane", "surprise"],
+    tags: ["voice-leading", "chromatic", "semitone", "coltrane", "surprise"],
     audio: {
       tempo: 68,
       events: [
@@ -16711,7 +16711,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Take a close-position chord and drop the second-highest note down an octave. Cmaj7 close (B-C-E-G) becomes Drop 2 (E-B-C-G). This opens up the voicing, puts it in a guitar/piano-friendly range, and creates beautiful voice leading between chords. The standard jazz guitar and piano voicing technique.",
-    tags: ["voice leading", "voicing", "drop 2", "jazz", "guitar"],
+    tags: ["voice-leading", "voicing", "drop 2", "jazz", "guitar"],
     audio: {
       tempo: 72,
       events: [
@@ -16728,7 +16728,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Close position: all chord tones within one octave (C-E-G-B). Open position: spread across more than an octave (C-G-B-E). Close position sounds dense and punchy. Open position sounds spacious and orchestral. The same four notes feel completely different depending on how far apart you spread them. Arrangers switch between the two for contrast.",
-    tags: ["voice leading", "voicing", "close position", "open position", "arranging"],
+    tags: ["voice-leading", "voicing", "close position", "open position", "arranging"],
     audio: {
       tempo: 72,
       events: [
@@ -16745,7 +16745,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Certain notes want to resolve in specific directions: the leading tone (7th degree) pulls up to the tonic, the 4th degree pulls down to the 3rd, the tritone in a dominant 7th wants to resolve inward or outward. Understanding these tendencies lets you either satisfy them (resolution) or deny them (surprise). Every musical emotion lives in this tension.",
-    tags: ["voice leading", "resolution", "tendency", "tension-release", "fundamental"],
+    tags: ["voice-leading", "resolution", "tendency", "tension-release", "fundamental"],
     audio: {
       tempo: 68,
       events: [
@@ -16762,7 +16762,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Hold a note from the previous chord while the other voices change, creating a dissonance that then resolves by step. A 4-3 suspension holds the 4th over a new chord then drops to the 3rd. The moment of friction before resolution is what makes suspensions so expressive — you feel the pull.",
-    tags: ["voice leading", "suspension", "resolution", "dissonance", "tension-release"],
+    tags: ["voice-leading", "suspension", "resolution", "dissonance", "tension-release"],
     audio: {
       tempo: 68,
       events: [
@@ -16779,7 +16779,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Like a suspension but the held note resolves upward instead of downward. The 7th holds over and resolves up to the octave (7-8), or the 2nd resolves up to the 3rd. Less common than downward suspensions, so it sounds slightly unexpected. Creates an uplifting, yearning quality — the voice is reaching up to its resolution.",
-    tags: ["voice leading", "retardation", "suspension", "resolution", "yearning"],
+    tags: ["voice-leading", "retardation", "suspension", "resolution", "yearning"],
     audio: {
       tempo: 68,
       events: [
@@ -16796,7 +16796,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "A note from the next chord arrives early — before the other voices change. The opposite of a suspension: instead of holding the old note too long, one voice jumps to the new note too soon. Creates a sense of eagerness and forward pull. Common in pop melodies and gospel piano where the melody anticipates the chord change.",
-    tags: ["voice leading", "anticipation", "forward motion", "pop", "gospel"],
+    tags: ["voice-leading", "anticipation", "forward motion", "pop", "gospel"],
     audio: {
       tempo: 76,
       events: [
@@ -16832,7 +16832,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "The 3rd of the chord is in the bass. Lighter and less grounded than root position — the chord floats. First inversions are the voice leading workhorse: they let you create smooth, stepwise bass lines between chords. C/E → F → G/B → C gives you a rising bass (E-F-G-C) instead of jumps (C-F-G-C).",
-    tags: ["inversion", "first inversion", "slash chord", "bass", "voice leading"],
+    tags: ["inversion", "first inversion", "slash chord", "bass", "voice-leading"],
     audio: {
       tempo: 72,
       events: [
@@ -16882,7 +16882,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "The art of picking which inversion of each chord creates the best bass line. The same I→IV→V→I progression sounds completely different with bass lines C-F-G-C (all root) vs. C-C-B-C (common tone + step) vs. E-F-G-C (ascending). The chords are identical — only the bass voice changes. This is why arrangers think in bass lines, not just chord symbols.",
-    tags: ["inversion", "bass", "voice leading", "arranging", "slash chord"],
+    tags: ["inversion", "bass", "voice-leading", "arranging", "slash chord"],
     audio: {
       tempo: 72,
       events: [
@@ -16899,7 +16899,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Moving between chords by changing just one note by one semitone. C major (C-E-G) → C minor (C-Eb-G) → Ab major (C-Eb-Ab) → Ab minor (Cb-Eb-Ab). Each chord is one note away from the next, but the harmonic distance traveled is enormous. This is how film composers move between distant keys without it sounding random — every step is tiny but the journey is vast.",
-    tags: ["voice leading", "neo-riemannian", "chromatic", "film", "transformation"],
+    tags: ["voice-leading", "neo-riemannian", "chromatic", "film", "transformation"],
     audio: {
       tempo: 68,
       events: [
@@ -16916,7 +16916,7 @@ const _concepts: Concept[] = [
     category: "voice-leading",
     description:
       "Two voices swap notes: the bass takes the soprano's note while the soprano takes the bass's note. In C major: bass goes C→E while soprano goes E→C, or bass C→G while soprano G→C. The chord stays the same but the voicing inverts. Creates smooth motion with zero harmonic change — pure voice-leading elegance.",
-    tags: ["voice leading", "exchange", "inversion", "counterpoint", "elegant"],
+    tags: ["voice-leading", "exchange", "inversion", "counterpoint", "elegant"],
     audio: {
       tempo: 68,
       events: [

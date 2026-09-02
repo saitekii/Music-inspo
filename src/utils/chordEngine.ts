@@ -45,6 +45,9 @@ export const CHORD_INTERVALS: Record<string, number[]> = {
   m7add4: [0, 3, 5, 7, 10],
   "7sus2": [0, 2, 7, 10],
   maj13sus2: [0, 2, 7, 11, 21],
+  m7add11: [0, 3, 7, 10, 17],
+  "11": [0, 7, 10, 14, 17],
+  "maj13#11": [0, 4, 7, 11, 18, 21],
 };
 
 export function generateVoicing(root: string, quality: string, bass?: string): string[] {
@@ -76,6 +79,7 @@ const Q_DISPLAY: Record<string, string> = {
   maj9: "maj9", m9: "m9", m11: "m11", add9: "add9",
   "7b9": "7♭9", "7#9": "7♯9", "13": "13",
   m7add4: "m7add4", "7sus2": "7sus2", maj13sus2: "maj13sus2",
+  m7add11: "m7(add11)", "11": "11", "maj13#11": "maj13(♯11)",
 };
 
 export function chordName(root: string, quality: string, bass?: string): string {
@@ -113,6 +117,9 @@ export const QUALITIES: { id: string; label: string; group: string }[] = [
   { id: "m7add4", label: "m7add4", group: "Ext" },
   { id: "7sus2", label: "7sus2", group: "Sus" },
   { id: "maj13sus2", label: "maj13sus2", group: "Ext" },
+  { id: "m7add11", label: "m7(add11)", group: "Ext" },
+  { id: "11", label: "11", group: "Ext" },
+  { id: "maj13#11", label: "maj13(♯11)", group: "Ext" },
 ];
 
 export interface BuilderChord {
@@ -465,6 +472,7 @@ export function getColorGroups(): ColorGroup[] {
         { quality: "7sus2", mood: "Floating" },
         { quality: "7sus4", mood: "Building" },
         { quality: "maj13sus2", mood: "Ethereal" },
+        { quality: "11", mood: "Wide" },
       ],
     },
     {
@@ -474,6 +482,7 @@ export function getColorGroups(): ColorGroup[] {
         { quality: "m7", mood: "Mellow" },
         { quality: "m6", mood: "Bittersweet" },
         { quality: "m9", mood: "Deep" },
+        { quality: "m7add11", mood: "Mystic" },
       ],
     },
     {
@@ -493,6 +502,7 @@ export function getColorGroups(): ColorGroup[] {
         { quality: "9", mood: "Funky" },
         { quality: "13", mood: "Full" },
         { quality: "mMaj7", mood: "Noir" },
+        { quality: "maj13#11", mood: "Lydian" },
       ],
     },
   ];
