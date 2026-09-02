@@ -175,6 +175,9 @@ export const PROGRESSION_NOVELTY: Record<string, number> = {
   "prog-slash-chord-descent": 3,
   "prog-slash-chord-ascent": 3,
 
+  // ── Collaborative builds ───────────────────────────────────
+  "prog-em-cinematic-journey": 7,
+
   // ── Passing chord progressions ────────────────────────────
   "passing-minor-iv": 5,
 };

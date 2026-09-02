@@ -25,11 +25,13 @@ interface ConceptCardProps {
   onToggleFavorite: () => void;
   onTagClick: (tag: string) => void;
   onSendToSketch?: () => void;
+  relatedConcepts?: Concept[];
+  onNavigateToConcept?: (id: string) => void;
 }
 
 export const ConceptCard = forwardRef<HTMLDivElement, ConceptCardProps>(
   function ConceptCard(
-    { concept, highlight, searchTerm, isPlaying, isFavorite, onPlay, onStop, onExportMidi, onMidiDragStart, onToggleFavorite, onTagClick, onSendToSketch },
+    { concept, highlight, searchTerm, isPlaying, isFavorite, onPlay, onStop, onExportMidi, onMidiDragStart, onToggleFavorite, onTagClick, onSendToSketch, relatedConcepts, onNavigateToConcept },
     ref
   ) {
     const [showRoll, setShowRoll] = useState(false);
@@ -116,6 +118,21 @@ export const ConceptCard = forwardRef<HTMLDivElement, ConceptCardProps>(
             </span>
           )}
         </div>
+        {relatedConcepts && relatedConcepts.length > 0 && onNavigateToConcept && (
+          <div className="concept-related">
+            <span className="related-label">Combines with</span>
+            {relatedConcepts.map((r) => (
+              <button
+                key={r.id}
+                className="related-link"
+                onClick={() => onNavigateToConcept(r.id)}
+                title={r.description.slice(0, 120) + "…"}
+              >
+                {r.name}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     );
   }

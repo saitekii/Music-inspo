@@ -16497,6 +16497,94 @@ const _concepts: Concept[] = [
     },
   },
 
+  // ── Collaborative Build: E Minor Cinematic Journey ────────
+  {
+    id: "prog-em-cinematic-journey",
+    name: "E Minor Cinematic Journey (Line Cliché → Major Pivot → ii-V Cycles)",
+    category: "progressions",
+    description:
+      "A 28-chord through-composed journey built by chaining concepts together. Opens with a line cliché — the inner voice chromatically descends D#→D→C#→C over an E pedal, creating movement within stillness. Steps through the relative major via secondary dominants (D9→Gmaj7, F#7b9→Bm7). A passing diminished chord (Bb°7) bridges Bm down to Am. The pivot: Bmaj7/D# reveals B as MAJOR for the first time, and Emaj9/G# confirms — we're suddenly in E major. The brightness lingers through F#m11 and A/C#, then another passing diminished (A#°7) pulls us back to minor. Cmaj7 glows as a chromatic neighbor before F#m7b5→B7sus4→B7 locks the minor ii-V. Resolution cycles through slash chords (Em/G, Cmaj7/E) echoing the opening, with B7/D# delivering the final push home to Em9.",
+    tags: ["line cliché", "major-minor ambiguity", "passing chords", "slash chord", "chromatic", "voice leading", "cinematic", "film", "secondary dominant"],
+    audio: {
+      tempo: 66,
+      events: [
+        // Section A: Line cliché (D#→D→C#→C over E pedal)
+        { notes: ["E2", "G3", "B3", "D#4"], duration: "1n" },
+        { notes: ["E2", "G3", "B3", "D4"], duration: "1n" },
+        { notes: ["E2", "G3", "B3", "C#4"], duration: "1n" },
+        { notes: ["E2", "G3", "B3", "C4"], duration: "1n" },
+        // Section B: Stepping toward relative major
+        { notes: ["A2", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["D2", "F#3", "A3", "C4", "E4"], duration: "2n" },
+        { notes: ["G2", "B2", "D3", "F#3"], duration: "2n" },
+        { notes: ["F#2", "A#2", "E3", "G3"], duration: "2n" },
+        // Section C: Chromatic tension → surprise
+        { notes: ["B2", "D3", "F#3", "A3"], duration: "2n" },
+        { notes: ["Bb2", "Db3", "E3", "G3"], duration: "2n" },
+        { notes: ["A2", "C3", "E3", "G3"], duration: "2n" },
+        { notes: ["F#2", "D3", "A3", "C4"], duration: "2n" },
+        { notes: ["G2", "D3", "F#3", "B3"], duration: "2n" },
+        { notes: ["D#2", "B2", "F#3", "A#3"], duration: "1n" },
+        // Section D: Major/minor pivot
+        { notes: ["G#2", "B2", "D#3", "F#3"], duration: "1n" },
+        { notes: ["F#2", "A2", "E3", "B3"], duration: "2n" },
+        { notes: ["C#3", "E3", "A3", "C#4"], duration: "2n" },
+        { notes: ["A#2", "C#3", "E3", "G3"], duration: "2n" },
+        { notes: ["B2", "F#3", "A3", "D4"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["F#2", "A2", "C3", "E3"], duration: "2n" },
+        { notes: ["B2", "E3", "F#3", "A3"], duration: "2n" },
+        // Section E: Resolution cycle
+        { notes: ["B2", "D#3", "F#3", "A3"], duration: "2n" },
+        { notes: ["G2", "B2", "E3", "G3"], duration: "2n" },
+        { notes: ["E2", "G3", "B3", "C4"], duration: "2n" },
+        { notes: ["A2", "C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["D#3", "F#3", "A3", "B3"], duration: "2n" },
+        { notes: ["E2", "G3", "B3", "D4", "F#4"], duration: "1n" },
+      ],
+    },
+  },
+
+  // ── Gap-Fill: Chromatic Neighbors & Harmonic Momentum ─────
+  {
+    id: "chromatic-neighbor-chord",
+    name: "Chromatic Neighboring Chord",
+    category: "harmonic-devices",
+    description:
+      "Any chord a half step above or below the target used as an embellishment — the target leaves, visits its chromatic neighbor, and returns. Unlike passing chords (which keep going), neighbor chords come home. I → bII → I is a lower chromatic neighbor (the Neapolitan rocking motion); I → #Imaj7 → ii is an upper chromatic approach that blurs into voice leading. Snarky Puppy, Louis Cole, and Shimomura all use chromatic neighbors to add color without changing the underlying harmonic function — the chord never really left, it just shimmered.",
+    tags: ["chromatic", "neighbor", "embellishing", "harmonic color", "voice leading"],
+    audio: {
+      tempo: 76,
+      events: [
+        { notes: ["C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["Db3", "F3", "Ab3", "C4"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["Db3", "F3", "Ab3", "Db4"], duration: "4n" },
+        { notes: ["D3", "F3", "A3", "C4"], duration: "2n." },
+      ],
+    },
+  },
+  {
+    id: "harmonic-momentum",
+    name: "Harmonic Momentum",
+    category: "harmonic-devices",
+    description:
+      "The forces that propel harmony forward — or deliberately stall it. Root motion by falling fifth is the strongest engine (ii→V→I, circle progressions). Secondary dominants stack momentum by chaining dominant-to-tonic resolutions. Rising bass lines build energy; falling bass lines release it. Accelerating harmonic rhythm compresses changes closer together, creating urgency. Conversely, pedal points, plagal motion, and modal vamps reduce momentum intentionally. The contrast between sections of high and low momentum is what makes arrangement feel alive — Louis Cole's writing constantly shifts between frantic harmonic acceleration and sudden static vamps. Understanding momentum means knowing not just which chords to use, but how fast to change them and where to let the music breathe.",
+    tags: ["harmonic rhythm", "forward motion", "momentum", "arrangement", "tension"],
+    audio: {
+      tempo: 100,
+      events: [
+        { notes: ["D3", "F3", "A3", "C4"], duration: "1n" },
+        { notes: ["G2", "B2", "D3", "F3"], duration: "2n" },
+        { notes: ["C3", "E3", "G3", "B3"], duration: "2n" },
+        { notes: ["A2", "C3", "E3", "G3"], duration: "4n" },
+        { notes: ["D3", "F#3", "A3", "C4"], duration: "4n" },
+        { notes: ["G2", "B2", "D3", "F3"], duration: "4n" },
+        { notes: ["C3", "E3", "G3"], duration: "2n." },
+      ],
+    },
+  },
+
   // ── Voice Leading ─────────────────────────────────────────
   {
     id: "vl-common-tone",

@@ -8,9 +8,11 @@ import { musicalFunctions } from "./data/functions";
 import { moods } from "./data/moods";
 import { useAudioPlayer, type PlaybackOptions, type SynthPresetId, SYNTH_PRESETS } from "./hooks/useAudioPlayer";
 import { VOICING_DENSITIES, type VoicingDensity } from "./utils/chordVoicing";
+import { buildRelatedMap } from "./utils/relatedConcepts";
 import { ContrastModal } from "./components/ContrastModal";
 import { SketchComposer } from "./components/SketchComposer";
 import { InspirationGenerator, type InspirationSet } from "./components/InspirationGenerator";
+import { ProgressionBuilder } from "./components/ProgressionBuilder";
 import { useMidiExport } from "./hooks/useMidiExport";
 import { useSoundFont } from "./hooks/useSoundFont";
 import type { Category } from "./types/concept";
@@ -75,6 +77,7 @@ function App() {
   const [showContrast, setShowContrast] = useState(false);
   const [showSketch, setShowSketch] = useState(false);
   const [showInspo, setShowInspo] = useState(false);
+  const [showBuilder, setShowBuilder] = useState(false);
   const [sketchImport, setSketchImport] = useState<import("./types/concept").AudioData | null>(null);
   const [inspoSettings, setInspoSettings] = useState<InspirationSet | null>(null);
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
@@ -235,6 +238,8 @@ function App() {
     return c;
   }, [categories]);
 
+  const relatedMap = useMemo(() => buildRelatedMap(concepts, 4), []);
+
   const allTags = useMemo(() => {
     const tagMap = new Map<string, number>();
     for (const c of concepts) {
@@ -356,6 +361,9 @@ function App() {
           </button>
           <button className="btn-inspo" onClick={() => setShowInspo(true)} title="Random inspiration generator">
             Inspire
+          </button>
+          <button className="btn-builder" onClick={() => setShowBuilder(true)} title="Build a chord progression step by step">
+            Build
           </button>
           <button className={`btn-tags${showTagExplorer ? " active" : ""}`} onClick={() => setShowTagExplorer(!showTagExplorer)} title="Explore tags">
             Tags
@@ -567,6 +575,8 @@ function App() {
                     onToggleFavorite={() => toggleFavorite(concept.id)}
                     onTagClick={handleTagClick}
                     onSendToSketch={() => handleSendToSketch(concept.audio)}
+                    relatedConcepts={relatedMap.get(concept.id)}
+                    onNavigateToConcept={handleNavigateToConcept}
                   />
                 ))}
               </div>
@@ -594,6 +604,7 @@ function App() {
         onApplyToSketch={handleApplyInspoToSketch}
         onNavigateToConcept={handleNavigateToConcept}
       />
+      <ProgressionBuilder open={showBuilder} onClose={() => setShowBuilder(false)} />
       <SketchComposer
         open={showSketch}
         onClose={() => setShowSketch(false)}
