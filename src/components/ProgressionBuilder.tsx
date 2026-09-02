@@ -65,6 +65,9 @@ export function ProgressionBuilder({ open, onClose }: Props) {
   const eventsRef = useRef<number[]>([]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playingIdx, setPlayingIdx] = useState<number | null>(null);
+  const [looping, setLooping] = useState(false);
+  const loopingRef = useRef(false);
+  const playAllRef = useRef<() => void>(() => {});
   const { exportMidi } = useMidiExport();
 
   const bassNotes = Array.from({ length: 12 }, (_, i) => semiToNote(i, keyRoot));
@@ -123,9 +126,18 @@ export function ProgressionBuilder({ open, onClose }: Props) {
       );
       offset += durSec;
     });
-    ids.push(window.setTimeout(() => { setIsPlaying(false); setPlayingIdx(null); }, offset * 1000));
+    ids.push(window.setTimeout(() => {
+      if (loopingRef.current) {
+        playAllRef.current();
+      } else {
+        setIsPlaying(false);
+        setPlayingIdx(null);
+      }
+    }, offset * 1000));
     eventsRef.current = ids;
   }, [chords, tempo, stopPlayback]);
+
+  playAllRef.current = playAll;
 
   const playSingle = useCallback(
     (chord: BuilderChord) => {
@@ -355,8 +367,23 @@ export function ProgressionBuilder({ open, onClose }: Props) {
               <button onClick={isPlaying ? stopPlayback : playAll} className={`builder-play${isPlaying ? " playing" : ""}`}>
                 {isPlaying ? "Stop" : "Play All"}
               </button>
+              <button
+                onClick={() => { const next = !looping; setLooping(next); loopingRef.current = next; }}
+                className={`builder-loop-btn${looping ? " active" : ""}`}
+                title="Loop playback"
+              >
+                Loop
+              </button>
               <button onClick={handleExportMidi} className="builder-midi-btn" disabled={chords.length === 0}>
                 MIDI
+              </button>
+              <button
+                onClick={() => { stopPlayback(); setChords([]); setSelectedIdx(null); }}
+                className="builder-clear-btn"
+                disabled={chords.length === 0}
+                title="Remove all chords"
+              >
+                Clear
               </button>
             </div>
           </div>

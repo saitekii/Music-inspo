@@ -2578,6 +2578,38 @@ body {
 }
 .builder-midi-btn:disabled { opacity: 0.4; cursor: default; }
 
+.builder-loop-btn {
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 600;
+}
+.builder-loop-btn:hover { border-color: var(--accent); color: var(--text); }
+.builder-loop-btn.active {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.builder-clear-btn {
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 600;
+}
+.builder-clear-btn:hover { border-color: rgba(239, 68, 68, 0.6); color: #ef4444; }
+.builder-clear-btn:disabled { opacity: 0.4; cursor: default; }
+
 /* Timeline */
 
 .builder-timeline-wrap {
