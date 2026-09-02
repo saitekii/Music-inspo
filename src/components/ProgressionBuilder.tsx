@@ -22,9 +22,19 @@ import {
 } from "../utils/chordEngine";
 import { useMidiExport } from "../hooks/useMidiExport";
 
+interface SavedProgression {
+  name: string;
+  chords: BuilderChord[];
+  keyRoot: string;
+  keyQuality: "major" | "minor";
+  tempo: number;
+  savedAt: number;
+}
+
 interface Props {
   open: boolean;
   onClose: () => void;
+  onSendToSketch?: (audio: import("../types/concept").AudioData) => void;
 }
 
 const DURATIONS = [
@@ -43,7 +53,7 @@ const TECHNIQUES = [
   { id: "secondary-dom", label: "Secondary Dom V", minor: null },
 ];
 
-export function ProgressionBuilder({ open, onClose }: Props) {
+export function ProgressionBuilder({ open, onClose, onSendToSketch }: Props) {
   const [chords, setChords] = useState<BuilderChord[]>([]);
   const [keyRoot, setKeyRoot] = useState("E");
   const [keyQuality, setKeyQuality] = useState<"major" | "minor">("minor");
@@ -60,6 +70,10 @@ export function ProgressionBuilder({ open, onClose }: Props) {
   const [recolorIdx, setRecolorIdx] = useState<number | null>(null);
   const [dragIdx, setDragIdx] = useState<number | null>(null);
   const [dragOverIdx, setDragOverIdx] = useState<number | null>(null);
+  const [showSaved, setShowSaved] = useState(false);
+  const [savedList, setSavedList] = useState<SavedProgression[]>(() => {
+    try { return JSON.parse(localStorage.getItem("saved-progressions") || "[]"); } catch { return []; }
+  });
 
   const synthRef = useRef<Tone.PolySynth | null>(null);
   const eventsRef = useRef<number[]>([]);
@@ -240,6 +254,36 @@ export function ProgressionBuilder({ open, onClose }: Props) {
     exportMidi("Progression", chordsToAudio(chords, tempo));
   }, [chords, tempo, exportMidi]);
 
+  const handleSendToSketch = useCallback(() => {
+    if (chords.length === 0 || !onSendToSketch) return;
+    onSendToSketch(chordsToAudio(chords, tempo));
+  }, [chords, tempo, onSendToSketch]);
+
+  const handleSave = useCallback(() => {
+    if (chords.length === 0) return;
+    const name = chords.map((c) => chordName(c.root, c.quality, c.bass || undefined)).join(" → ");
+    const prog: SavedProgression = { name, chords: [...chords], keyRoot, keyQuality, tempo, savedAt: Date.now() };
+    const updated = [prog, ...savedList.filter((s) => s.name !== name)].slice(0, 20);
+    setSavedList(updated);
+    localStorage.setItem("saved-progressions", JSON.stringify(updated));
+  }, [chords, keyRoot, keyQuality, tempo, savedList]);
+
+  const handleLoadSaved = useCallback((prog: SavedProgression) => {
+    stopPlayback();
+    setChords(prog.chords);
+    setKeyRoot(prog.keyRoot);
+    setKeyQuality(prog.keyQuality);
+    setTempo(prog.tempo);
+    setSelectedIdx(null);
+    setShowSaved(false);
+  }, [stopPlayback]);
+
+  const handleDeleteSaved = useCallback((idx: number) => {
+    const updated = savedList.filter((_, i) => i !== idx);
+    setSavedList(updated);
+    localStorage.setItem("saved-progressions", JSON.stringify(updated));
+  }, [savedList]);
+
   const diatonic = getDiatonicChords(keyRoot, keyQuality);
 
   const lastChord = chords.length > 0 ? chords[chords.length - 1] : null;
@@ -377,6 +421,22 @@ export function ProgressionBuilder({ open, onClose }: Props) {
               <button onClick={handleExportMidi} className="builder-midi-btn" disabled={chords.length === 0}>
                 MIDI
               </button>
+              {onSendToSketch && (
+                <button onClick={handleSendToSketch} className="builder-midi-btn" disabled={chords.length === 0} title="Send to Sketch Composer">
+                  Sketch
+                </button>
+              )}
+              <button onClick={handleSave} className="builder-midi-btn" disabled={chords.length === 0} title="Save progression">
+                Save
+              </button>
+              <button
+                onClick={() => setShowSaved((p) => !p)}
+                className={`builder-loop-btn${showSaved ? " active" : ""}`}
+                disabled={savedList.length === 0}
+                title="Load saved progression"
+              >
+                Saved{savedList.length > 0 ? ` (${savedList.length})` : ""}
+              </button>
               <button
                 onClick={() => { stopPlayback(); setChords([]); setSelectedIdx(null); }}
                 className="builder-clear-btn"
@@ -389,6 +449,21 @@ export function ProgressionBuilder({ open, onClose }: Props) {
           </div>
           <button className="builder-close" onClick={onClose}>×</button>
         </div>
+
+        {showSaved && savedList.length > 0 && (
+          <div className="builder-saved-panel">
+            <h3>Saved Progressions</h3>
+            {savedList.map((prog, i) => (
+              <div key={i} className="builder-saved-item">
+                <button className="builder-saved-load" onClick={() => handleLoadSaved(prog)}>
+                  <span className="saved-name">{prog.name}</span>
+                  <span className="saved-meta">{prog.keyRoot} {prog.keyQuality} · {prog.tempo}bpm · {prog.chords.length} chords</span>
+                </button>
+                <button className="builder-saved-delete" onClick={() => handleDeleteSaved(i)} title="Delete">×</button>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="builder-timeline-wrap">
           <div className="builder-timeline">

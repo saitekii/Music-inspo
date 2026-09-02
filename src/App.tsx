@@ -604,7 +604,7 @@ function App() {
         onApplyToSketch={handleApplyInspoToSketch}
         onNavigateToConcept={handleNavigateToConcept}
       />
-      <ProgressionBuilder open={showBuilder} onClose={() => setShowBuilder(false)} />
+      <ProgressionBuilder open={showBuilder} onClose={() => setShowBuilder(false)} onSendToSketch={handleSendToSketch} />
       <SketchComposer
         open={showSketch}
         onClose={() => setShowSketch(false)}
